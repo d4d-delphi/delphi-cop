@@ -96,7 +96,7 @@ export default function EnemyPanel({ events, currentTime, inferenceResult, scena
           <div className="p-3 border-b border-gray-800 bg-gray-900/40 shrink-0">
             <h2 className="text-sm font-bold text-amber-400 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-              위협 시나리오 분석
+              미사일 시나리오
             </h2>
           </div>
           <div className="flex-1 overflow-y-auto p-2">

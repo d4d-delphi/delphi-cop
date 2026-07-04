@@ -14,6 +14,9 @@ import { structureReport } from '@/lib/spuq';
 import hypothesesData from '@/data/hypotheses.json';
 import scenarioAData from '@/data/scenario-a.json';
 import scenarioBData from '@/data/scenario-b.json';
+import phasesSolidLong from '@/data/phases-solid-long.json';
+import phasesLiquidLong from '@/data/phases-liquid-long.json';
+import phasesLiquidShort from '@/data/phases-liquid-short.json';
 
 const CesiumMap = dynamic(() => import('@/components/CesiumMap'), { ssr: false });
 
@@ -262,8 +265,10 @@ export default function Home() {
                 currentTime={currentTime}
                 inferenceResult={inferenceResult}
                 scenarios={[
-                  { id: 'h-satellite', name: '우주발사체(정찰위성) 발사', phases: scenarioAData.phases },
-                  { id: 'h-solid-short', name: '고체연료 단거리 미사일(SRBM)', phases: scenarioBData.phases }
+                  { id: 'h-solid-short',  name: '고체 단거리 (SRBM)',       phases: scenarioBData.phases as any },
+                  { id: 'h-solid-long',   name: '고체 장거리 (IRBM/ICBM)', phases: phasesSolidLong as any },
+                  { id: 'h-liquid-long',  name: '액체 장거리 (ICBM/IRBM)', phases: phasesLiquidLong as any },
+                  { id: 'h-liquid-short', name: '액체 단거리 (SCUD/노동)',  phases: phasesLiquidShort as any },
                 ]}
               />
             </div>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "사전개발",
+    "startTime": 0,
+    "endTime": 1000,
+    "description": "Pre-Phase: 산음동 스커드·노동 생산시설 활동 급증",
+    "cameraTarget": { "lat": 39.7, "lng": 126.1, "range": 300000 }
+  },
+  {
+    "id": 2,
+    "name": "연료 준비",
+    "startTime": 1000,
+    "endTime": 2200,
+    "description": "Phase 1 (D-10~D-5) 25%: 산화제·추진제 운반·혼합 탱크로리 집결",
+    "cameraTarget": { "lat": 39.3, "lng": 126.5, "range": 400000 }
+  },
+  {
+    "id": 3,
+    "name": "TEL 전개",
+    "startTime": 2200,
+    "endTime": 3400,
+    "description": "Phase 2 (D-5~D-2) 50%: 이동식 발사대 전방 사격 진지 전개",
+    "cameraTarget": { "lat": 38.8, "lng": 126.8, "range": 500000 }
+  },
+  {
+    "id": 4,
+    "name": "연료주입·VIP",
+    "startTime": 3400,
+    "endTime": 4600,
+    "description": "Phase 3 (D-2~H-4) 75%: 액체연료 주입 완료·VIP 전용열차 소실",
+    "cameraTarget": { "lat": 38.9, "lng": 126.6, "range": 200000 }
+  },
+  {
+    "id": 5,
+    "name": "발사임박",
+    "startTime": 4600,
+    "endTime": 5200,
+    "description": "Phase 4 (H-4~H-0) 95%: 카운트다운·발사통제 무전 폭증",
+    "cameraTarget": { "lat": 38.8, "lng": 126.5, "range": 100000 }
+  },
+  {
+    "id": 6,
+    "name": "발사·추적·검증",
+    "startTime": 5200,
+    "endTime": 6000,
+    "description": "Phase 5/6: 스커드/노동 발사·탄착 확인·OSINT",
+    "cameraTarget": { "lat": 39.2, "lng": 127.8, "range": 700000 }
+  }
+]

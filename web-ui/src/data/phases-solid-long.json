@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "사전개발",
+    "startTime": 0,
+    "endTime": 1000,
+    "description": "Pre-Phase: 함흥 고체모터 연소 시험·동체 설계 검증",
+    "cameraTarget": { "lat": 39.9, "lng": 127.6, "range": 300000 }
+  },
+  {
+    "id": 2,
+    "name": "고체생산",
+    "startTime": 1000,
+    "endTime": 2000,
+    "description": "Phase 1 (D-20~D-10) 25%: 함흥 17/11호 고체 배합·대형 동체 조립",
+    "cameraTarget": { "lat": 39.6, "lng": 127.1, "range": 400000 }
+  },
+  {
+    "id": 3,
+    "name": "TEL기동·신포",
+    "startTime": 2000,
+    "endTime": 3000,
+    "description": "Phase 2 (D-10~D-5) 45%: 대형 TEL 순안/전방 이동·신포 계측차량 집결",
+    "cameraTarget": { "lat": 39.4, "lng": 126.8, "range": 600000 }
+  },
+  {
+    "id": 4,
+    "name": "VIP·방공",
+    "startTime": 3000,
+    "endTime": 4000,
+    "description": "Phase 3 (D-5~D-2) 65%: 전용열차 소실·발사 궤적 방공망 가동",
+    "cameraTarget": { "lat": 39.1, "lng": 126.5, "range": 400000 }
+  },
+  {
+    "id": 5,
+    "name": "발사임박",
+    "startTime": 4000,
+    "endTime": 5000,
+    "description": "Phase 4 (D-2~H-0) 92%: TEL 직립·방공 완료·카운트다운",
+    "cameraTarget": { "lat": 39.0, "lng": 125.9, "range": 120000 }
+  },
+  {
+    "id": 6,
+    "name": "발사·추적·검증",
+    "startTime": 5000,
+    "endTime": 6000,
+    "description": "Phase 5/6: 고각 탄도 발사·궤적 추적·D+1 OSINT",
+    "cameraTarget": { "lat": 39.5, "lng": 130.0, "range": 1200000 }
+  }
+]

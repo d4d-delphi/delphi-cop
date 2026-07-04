@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "사전개발",
+    "startTime": 0,
+    "endTime": 800,
+    "description": "Pre-Phase: 순안 발사대 정비·산화제 생산시설 가동 준비",
+    "cameraTarget": { "lat": 39.0, "lng": 125.7, "range": 300000 }
+  },
+  {
+    "id": 2,
+    "name": "연료·동체생산",
+    "startTime": 800,
+    "endTime": 2000,
+    "description": "Phase 1 (D-30~D-14) 20%: 만포 비날론 산화제 생산·ICBM 동체 조립",
+    "cameraTarget": { "lat": 40.8, "lng": 126.3, "range": 500000 }
+  },
+  {
+    "id": 3,
+    "name": "발사장 준비",
+    "startTime": 2000,
+    "endTime": 3200,
+    "description": "Phase 2 (D-14~D-7) 40%: 순안 발사대 직립·차량 100+ 집결·바지선 확인",
+    "cameraTarget": { "lat": 39.1, "lng": 125.7, "range": 200000 }
+  },
+  {
+    "id": 4,
+    "name": "VIP·연료주입",
+    "startTime": 3200,
+    "endTime": 4500,
+    "description": "Phase 3 (D-7~D-1) 70%: 전용열차 소실·산화제 주입 시작(MASINT 확인)",
+    "cameraTarget": { "lat": 39.0, "lng": 125.9, "range": 150000 }
+  },
+  {
+    "id": 5,
+    "name": "발사임박",
+    "startTime": 4500,
+    "endTime": 5200,
+    "description": "Phase 4 (D-1~H-0) 95%: 연료주입 완료·Ping 신호·카운트다운",
+    "cameraTarget": { "lat": 39.0, "lng": 125.7, "range": 80000 }
+  },
+  {
+    "id": 6,
+    "name": "발사·추적·검증",
+    "startTime": 5200,
+    "endTime": 6000,
+    "description": "Phase 5/6: ICBM 고각 발사·일본 EEZ 탄착·OSINT 검증",
+    "cameraTarget": { "lat": 40.0, "lng": 138.0, "range": 2000000 }
+  }
+]
