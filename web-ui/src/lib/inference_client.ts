@@ -5,6 +5,15 @@ import { InferenceResult, HypothesisNode, TimelineEvent } from '@/types';
 
 const BACKEND = process.env.NEXT_PUBLIC_BACKEND_API_URL;
 
+// 백엔드가 돌려주는 한글 가설 라벨 → 프론트 시나리오 id(EnemyPanel `scenarios` prop과 매칭).
+// 매핑이 없으면 라벨 원문을 id로 사용. (delphiAdapter.ts LABEL_MAP과 동일 키)
+const LABEL_TO_ID: Record<string, string> = {
+  '액체·장거리': 'h-liquid-long',
+  '고체·장거리': 'h-solid-long',
+  '액체·단거리': 'h-liquid-short',
+  '고체·단거리': 'h-solid-short',
+};
+
 // 시나리오 → 백엔드 캠페인. (백엔드 캠페인: unha3=동창리/은하-3, sinpo, punggye)
 const SCENARIO_CAMPAIGN: Record<string, string> = {
   'scenario-a': 'unha3',
@@ -65,7 +74,8 @@ export async function runBackendInference(
     const contribsFor = (name: string) =>
       (b.hypothesis_contributions?.[name] || []).map((c) => c.obs_id);
     const nodes: HypothesisNode[] = entries.map(([name, p]) => ({
-      id: name,
+      // id는 시나리오 매칭용 정규 id로 매핑, name/기여도 조회는 백엔드 원문 라벨 유지.
+      id: LABEL_TO_ID[name] ?? name,
       name,
       category: 'missile_launch',
       prior: p,
