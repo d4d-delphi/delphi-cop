@@ -1,0 +1,294 @@
+{
+  "raw": [
+    {
+      "id": "sigint-raw-a-001",
+      "timestamp": "2026-07-04T08:05:00Z",
+      "receiving_system": "777사령부 ELINT 수집소",
+      "estimated_MGRS": "52SDC0605",
+      "frequency_band": "VHF",
+      "signal_characteristics": {
+        "PRI": null,
+        "PW": null,
+        "Scan": "단방향 교신"
+      },
+      "raw_emitter_guess": "지상 발사통제소 VHF 무전기",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-a-002",
+      "timestamp": "2026-07-04T08:10:00Z",
+      "receiving_system": "777사령부 ELINT 수집소",
+      "estimated_MGRS": "52SDC0505",
+      "frequency_band": "UHF",
+      "signal_characteristics": {
+        "PRI": 0.001,
+        "PW": 0.0005,
+        "Scan": "Omni"
+      },
+      "raw_emitter_guess": "KN-23 텔레메트리 송신기 (비행 전 체크)",
+      "signal_strength": "Moderate"
+    },
+    {
+      "id": "sigint-raw-a-003",
+      "timestamp": "2026-07-03T18:00:00Z",
+      "receiving_system": "E-737 피스아이 (원산 북방 탐지)",
+      "estimated_MGRS": "52SDC0300",
+      "frequency_band": "S-Band",
+      "signal_characteristics": {
+        "PRI": 2500,
+        "PW": 3.5,
+        "Scan": "원형 회전"
+      },
+      "raw_emitter_guess": "SA-2 Guideline 탐색레이더 (Fan Song)",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-a-004",
+      "timestamp": "2026-07-04T07:50:00Z",
+      "receiving_system": "777사령부 ELINT 수집소",
+      "estimated_MGRS": "52SDC0600",
+      "frequency_band": "HF",
+      "signal_characteristics": {
+        "PRI": null,
+        "PW": null,
+        "Scan": "데이터링크"
+      },
+      "raw_emitter_guess": "발사준비 완료 보고 HF 데이터 링크",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-a-005",
+      "timestamp": "2026-07-04T08:03:00Z",
+      "receiving_system": "금강 RC-800 수집소",
+      "estimated_MGRS": "52SDC0505",
+      "frequency_band": "UHF",
+      "signal_characteristics": {
+        "PRI": 0.002,
+        "PW": 0.001,
+        "Scan": "지향성"
+      },
+      "raw_emitter_guess": "소형 드론(촬영용) 텔레메트리",
+      "signal_strength": "Moderate"
+    },
+    {
+      "id": "sigint-raw-b-001",
+      "timestamp": "2026-06-30T03:00:00Z",
+      "receiving_system": "777사령부 ELINT 수집소",
+      "estimated_MGRS": "52SCC5012",
+      "frequency_band": "S-Band",
+      "signal_characteristics": {
+        "PRI": 2000,
+        "PW": 3.0,
+        "Scan": "섹터 스캔"
+      },
+      "raw_emitter_guess": "동창리 방공망 S-300 SAM 레이더",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-b-002",
+      "timestamp": "2026-06-28T22:15:00Z",
+      "receiving_system": "777사령부 ELINT 수집소",
+      "estimated_MGRS": "52SCC5013",
+      "frequency_band": "X-Band",
+      "signal_characteristics": {
+        "PRI": 1000,
+        "PW": 1.5,
+        "Scan": "섹터 스캔"
+      },
+      "raw_emitter_guess": "동창리 항만 선박 접안 레이더",
+      "signal_strength": "Moderate"
+    },
+    {
+      "id": "sigint-raw-c-001",
+      "timestamp": "2022-03-24T13:00:00Z",
+      "receiving_system": "주한미군 SIGINT 수집소",
+      "estimated_MGRS": "52SCC9118",
+      "frequency_band": "VHF",
+      "signal_characteristics": {
+        "PRI": null,
+        "PW": null,
+        "Scan": "보안 통신"
+      },
+      "raw_emitter_guess": "순안 발사장 보안구역 설정 통신",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-c-002",
+      "timestamp": "2022-03-24T14:30:00Z",
+      "receiving_system": "주한미군 SIGINT 수집소",
+      "estimated_MGRS": "52SCC9118",
+      "frequency_band": "HF",
+      "signal_characteristics": {
+        "PRI": null,
+        "PW": null,
+        "Scan": "버스트 전송"
+      },
+      "raw_emitter_guess": "화성-17 발사 직전 최종 교신",
+      "signal_strength": "High"
+    },
+    {
+      "id": "sigint-raw-d-001",
+      "timestamp": "2023-07-12T08:48:00Z",
+      "receiving_system": "E-737 피스아이",
+      "estimated_MGRS": "52SBC8020",
+      "frequency_band": "UHF",
+      "signal_characteristics": {
+        "PRI": 0.0005,
+        "PW": 0.0003,
+        "Scan": "Omni"
+      },
+      "raw_emitter_guess": "화성-18 탈락 방식 덮개 분리 확인 신호",
+      "signal_strength": "Moderate"
+    },
+    {
+      "id": "sigint-raw-e-001",
+      "timestamp": "2025-09-14T20:00:00Z",
+      "receiving_system": "P-8A 포세이돈 (SIGINT 모드)",
+      "estimated_MGRS": "52SDD5020",
+      "frequency_band": "L-Band",
+      "signal_characteristics": {
+        "PRI": 5000,
+        "PW": 10.0,
+        "Scan": "저주파 수중음향"
+      },
+      "raw_emitter_guess": "신포급 잠수함 수중 통신 / SLBM 발사 준비 음향",
+      "signal_strength": "Weak"
+    },
+    {
+      "id": "sigint-raw-e-002",
+      "timestamp": "2025-09-15T04:10:00Z",
+      "receiving_system": "P-8A 포세이돈 (SIGINT 모드)",
+      "estimated_MGRS": "52SDD5515",
+      "frequency_band": "L-Band",
+      "signal_characteristics": {
+        "PRI": 3000,
+        "PW": 8.0,
+        "Scan": "수중 저주파 펄스"
+      },
+      "raw_emitter_guess": "수중발사 직전 미사일 점검 신호 / 어뢰관 개방 음향",
+      "signal_strength": "Moderate"
+    }
+  ],
+  "processed": [
+    {
+      "id": "sigint-proc-a-001",
+      "time_start": "2026-07-04T08:00:00Z",
+      "time_end": "2026-07-04T08:45:00Z",
+      "facility_name": "원산 갈마 발사통제소",
+      "emitter_identified": "KN-23 발사통제 VHF 네트워크",
+      "integrated_sources": ["sigint-raw-a-001", "sigint-raw-a-004"],
+      "human_summary": "원산 갈마 발사통제소에서 관련 부대로 발사 승인 VHF 교신 포착. 08:05~08:10 교신량 기준치 대비 3.2배 급증. 07:50 HF 데이터링크로 '발사준비완료(Y코드)' 버스트 전송 탐지. 2019년 5월 KN-23 최초 발사 시 동일 패턴.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-a-002",
+      "time_start": "2026-07-04T08:03:00Z",
+      "time_end": "2026-07-04T08:15:00Z",
+      "facility_name": "원산 앞바다 (촬영드론)",
+      "emitter_identified": "소형 무인기 UHF 텔레메트리",
+      "integrated_sources": ["sigint-raw-a-005"],
+      "human_summary": "원산 갈마 해안 앞바다 상공에서 소형 무인기(DJI 계열 추정) 텔레메트리 신호 포착. 과거 KN-23 발사 당시 공개용 촬영 드론 패턴과 일치. 발사 영상 촬영 목적으로 판단. 발사 10-15분 전 전개.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-a-003",
+      "time_start": "2026-07-03T18:00:00Z",
+      "time_end": "2026-07-04T09:00:00Z",
+      "facility_name": "원산 SA-2 방공진지",
+      "emitter_identified": "SA-2 Guideline Fan Song 조명레이더",
+      "integrated_sources": ["sigint-raw-a-003"],
+      "human_summary": "원산 북방 SA-2 방공진지 Fan Song 레이더 지속 운용 감지. 발사 14시간 전 가동 시작. 발사 엄호 방공망 구성 패턴. 2022년 화성-17 발사 시 동일 위치 SA-2 가동 사례 있음.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-a-004",
+      "time_start": "2026-07-04T08:10:00Z",
+      "time_end": "2026-07-04T08:20:00Z",
+      "facility_name": "KN-23 비행 텔레메트리",
+      "emitter_identified": "KN-23 탄두 UHF 텔레메트리 (비행 중)",
+      "integrated_sources": ["sigint-raw-a-002"],
+      "human_summary": "KN-23 발사 후 비행 중 UHF 텔레메트리 포착. 08:10 발사 확인. 비행 3분 경과. 피아식별 신호 없음. KAMD 그린파인 레이더 융합으로 비행 궤적 최종 확인.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-b-001",
+      "time_start": "2026-06-28T22:00:00Z",
+      "time_end": "2026-06-30T06:00:00Z",
+      "facility_name": "동창리 항만 및 방공망",
+      "emitter_identified": "S-300 방공레이더 + 항만 접안 레이더",
+      "integrated_sources": ["sigint-raw-b-001", "sigint-raw-b-002"],
+      "human_summary": "동창리 주변 S-300 방공레이더 가동 확인. X-band 선박 접안 레이더 동시 활성화. 발사장 보호 방공망 구축 및 바지선 접안 유도 레이더 운용. 발사 준비 중 방공 태세 격상 패턴과 일치.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-c-001",
+      "time_start": "2022-03-24T13:00:00Z",
+      "time_end": "2022-03-24T14:35:00Z",
+      "facility_name": "순안 화성-17 발사 통제망",
+      "emitter_identified": "화성-17 발사통제 VHF + HF 복합망",
+      "integrated_sources": ["sigint-raw-c-001", "sigint-raw-c-002"],
+      "human_summary": "순안 화성-17 발사 전 보안구역 설정 VHF 통신 포착. 항공기 우회 지시 신호 동반. 14:30 HF 버스트 전송으로 최종 카운트다운 교신. 2017년 화성-15 발사 시와 동일 신호 특성. 발사 4분 후 신호 소멸.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-d-001",
+      "time_start": "2023-07-12T08:44:00Z",
+      "time_end": "2023-07-12T09:05:00Z",
+      "facility_name": "평안남도 화성-18 발사지",
+      "emitter_identified": "화성-18 덮개 분리 및 발사 확인 신호",
+      "integrated_sources": ["sigint-raw-d-001"],
+      "human_summary": "화성-18 발사 직전 08:48에 고체추진제 발사 준비 완료 확인 신호 포착. 액체연료 계열과 달리 연료주입 신호 없음. 발사 13분 전 첫 신호, 발사 후 16분간 비행 중 텔레메트리 추적. 고체연료 단시간 발사 패턴 확인.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-e-001",
+      "time_start": "2025-09-14T20:00:00Z",
+      "time_end": "2025-09-15T04:25:00Z",
+      "facility_name": "동해 북방 해역 (신포급 잠수함)",
+      "emitter_identified": "신포-C급 잠수함 수중 통신 + SLBM 발사 음향",
+      "integrated_sources": ["sigint-raw-e-001", "sigint-raw-e-002"],
+      "human_summary": "09.14 20:00 수중 저주파 통신 탐지 이후 09.15 04:10 수중 발사 직전 점검 신호 포착. 04:20 수중 발사음향 SOSUS망 확인. 북극성-3 발사 확인. 잠수함 발사 이후 수중 퇴각 기동 중 추정.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-f-001",
+      "time_start": "2026-07-01T22:00:00Z",
+      "time_end": "2026-07-02T02:00:00Z",
+      "facility_name": "원산 갈마 SA-2 방공진지 (2차 가동)",
+      "emitter_identified": "SA-2 Fan Song + Low Blow 레이더 복합 운용",
+      "integrated_sources": ["sigint-raw-a-003"],
+      "human_summary": "원산 SA-2 진지에서 Fan Song 탐색레이더와 Low Blow 유도레이더 동시 가동. 교신 분석 결과 '발사 엄호' 임무 배정 신호 포착. 한미 정찰자산 접근 차단 의도. 방공 교신 빈도 3배 증가.",
+      "ew_environment": "Jammed"
+    },
+    {
+      "id": "sigint-proc-g-001",
+      "time_start": "2026-07-04T06:00:00Z",
+      "time_end": "2026-07-04T08:00:00Z",
+      "facility_name": "원산 발사통제소 최종 준비 교신",
+      "emitter_identified": "발사통제 VHF 최종 점검망",
+      "integrated_sources": ["sigint-raw-a-001", "sigint-raw-a-004"],
+      "human_summary": "발사 2시간 전부터 발사통제소-TEL 간 VHF 점검 교신 증가. 06:30 연료주입 완료 확인 코드 탐지. 07:00 비행 안전구역 설정 교신. 07:50 최종 발사 승인 데이터링크 버스트. 2026-04 발사 약 25분 전 교신 완전 소멸.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-h-001",
+      "time_start": "2016-08-23T16:00:00Z",
+      "time_end": "2016-08-24T05:35:00Z",
+      "facility_name": "동해 (북극성-1 SLBM 발사)",
+      "emitter_identified": "해상 보안구역 설정 통신 + 잠수함 교신",
+      "integrated_sources": [],
+      "human_summary": "08.23 해상 보안구역 설정 신호 포착. 08.24 05:00 잠수함 발사 직전 음향 포착 후 05:30 수중 발사 확인. 해상 보안구역 실제 잠수함 위치 반경 50km. 지금까지 SLBM 8차례 발사 중 해상 보안구역 없이 발사한 사례 없음.",
+      "ew_environment": "Normal"
+    },
+    {
+      "id": "sigint-proc-i-001",
+      "time_start": "2022-10-04T07:10:00Z",
+      "time_end": "2022-10-04T07:25:00Z",
+      "facility_name": "무수단리 화성-12 발사 교신",
+      "emitter_identified": "화성-12 발사통제 + 일본 측 해상보안청 경보",
+      "integrated_sources": [],
+      "human_summary": "무수단리 VHF 발사 직전 교신 07:15 포착. 07:22 화성-12 발사 확인. 일본 방위성 Jアラート 발령(07:27). 비행 40분 후 일본 상공 통과 확인. 태평양 낙하 지점 SIGINT 추적.",
+      "ew_environment": "Normal"
+    }
+  ]
+}

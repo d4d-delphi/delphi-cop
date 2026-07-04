@@ -1,5 +1,5 @@
 import { HistoricalCase } from '@/types';
-import historicalCases from '@/data/historical-cases.json';
+import historicalCases from '@/data/mock/historical-cases-full.json';
 
 // Simple keyword-based similarity for demo (fallback when Supabase unavailable)
 function calculateSimilarity(indicators: string[], caseIndicators: string[]): number {

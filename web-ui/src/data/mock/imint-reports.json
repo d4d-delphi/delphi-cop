@@ -1,0 +1,291 @@
+[
+  {
+    "id": "imint-a-001",
+    "timestamp_captured": "2026-06-15T03:22:00Z",
+    "timestamp_analyzed": "2026-06-15T05:45:00Z",
+    "sensor_type": "IR",
+    "source_platform": "425 위성(SAR/IR 복합체)",
+    "MGRS_coordinate": "52SCD8821",
+    "location_name": "잠진 엔진시험장",
+    "detected_objects": [
+      {"type": "고온_열원", "count": 1},
+      {"type": "시험대", "count": 1},
+      {"type": "지원차량", "count": 3}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "잠진 엔진시험장 액체연료 로켓엔진 연소 시험 징후. 복사온도 약 1,200K 추정. 기존 화성-17 1단 엔진 시험과 동일 패턴. 2025.11 이후 3번째 포착.",
+    "confidence_level": 4,
+    "analyst_name": "김○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-a-002",
+    "timestamp_captured": "2026-06-20T04:10:00Z",
+    "timestamp_analyzed": "2026-06-20T07:30:00Z",
+    "sensor_type": "SAR",
+    "source_platform": "425 위성 1호(SAR)",
+    "MGRS_coordinate": "52SCC5012",
+    "location_name": "동창리 서해위성발사장",
+    "detected_objects": [
+      {"type": "TEL", "count": 1},
+      {"type": "발사대", "count": 1},
+      {"type": "조립동", "count": 1},
+      {"type": "바지선", "count": 0}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "동창리 발사대 주변 TEL 1기 조립동 방향 이동 포착. SAR 역후방산란(backscatter) 분석 결과 21.4m 금속체(발사체 동체 추정) 이동. 발사대 직립 준비 단계로 판단.",
+    "confidence_level": 4,
+    "analyst_name": "이○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-a-003",
+    "timestamp_captured": "2026-06-22T11:00:00Z",
+    "timestamp_analyzed": "2026-06-22T14:20:00Z",
+    "sensor_type": "EO",
+    "source_platform": "상용위성 플래닛랩스(PlanetScope)",
+    "MGRS_coordinate": "52SCD2218",
+    "location_name": "만포 산화제 저장·공급 시설",
+    "detected_objects": [
+      {"type": "탱크로리", "count": 12},
+      {"type": "저장탱크", "count": 4},
+      {"type": "지게차", "count": 2}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "만포 UDMH/N2O4 저장시설에서 탱크로리 12대 집결 포착. 지난 30일간 최대 규모. 2022년 화성-17 발사 당시(10대)를 초과. 동창리 방향 수송 대기 중으로 판단.",
+    "confidence_level": 3,
+    "analyst_name": "박○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-a-004",
+    "timestamp_captured": "2026-06-25T02:15:00Z",
+    "timestamp_analyzed": "2026-06-25T05:00:00Z",
+    "sensor_type": "IR",
+    "source_platform": "425 위성(SAR/IR 복합체)",
+    "MGRS_coordinate": "52SCD4510",
+    "location_name": "함흥 UDMH 생산공장 (2.8비날론 연합기업소)",
+    "detected_objects": [
+      {"type": "고온_배관", "count": 6},
+      {"type": "냉각탑", "count": 2},
+      {"type": "지원차량", "count": 8}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "함흥 UDMH(비대칭디메틸히드라진) 생산공장 IR 고온 배관 6개소 활성화. 야간 운용(02:00 포착)은 비정상. UDMH 생산 가동률 최대 추정. 동창리 연료 수요 증가와 연동 판단.",
+    "confidence_level": 4,
+    "analyst_name": "최○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-a-005",
+    "timestamp_captured": "2026-06-28T08:30:00Z",
+    "timestamp_analyzed": "2026-06-28T11:00:00Z",
+    "sensor_type": "SAR",
+    "source_platform": "상용위성 ICEYE(SAR)",
+    "MGRS_coordinate": "52SCC5013",
+    "location_name": "동창리 항만 시설",
+    "detected_objects": [
+      {"type": "바지선", "count": 1},
+      {"type": "크레인", "count": 2},
+      {"type": "탱크로리", "count": 4}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "동창리 항만 바지선(전장 약 50m, 2017년 광명성 발사 시 동일 선종) 접안 확인. 탱크로리 4대 산화제 하역 중 추정. 발사 72-96시간 전 산화제 수령 패턴과 일치.",
+    "confidence_level": 5,
+    "analyst_name": "이○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-a-006",
+    "timestamp_captured": "2026-07-01T01:00:00Z",
+    "timestamp_analyzed": "2026-07-01T03:30:00Z",
+    "sensor_type": "EO",
+    "source_platform": "425 위성 1호(EO/IR 복합)",
+    "MGRS_coordinate": "52SBC7822",
+    "location_name": "평성 산음동 미사일 공장",
+    "detected_objects": [
+      {"type": "대형_TEL", "count": 2},
+      {"type": "발사체_동체_추정", "count": 1},
+      {"type": "지원차량", "count": 6}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "평성 산음동 미사일 조립공장 외부에서 20m 이상 길이 발사체 동체 이동 포착. 대형 TEL 2기가 공장 앞 대기 중. 화성 계열 조립 완료 후 발사 거점 이동 전 단계로 판단.",
+    "confidence_level": 3,
+    "analyst_name": "정○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-b-001",
+    "timestamp_captured": "2026-06-10T22:00:00Z",
+    "timestamp_analyzed": "2026-06-11T01:30:00Z",
+    "sensor_type": "IR",
+    "source_platform": "425 위성(SAR/IR 복합체)",
+    "MGRS_coordinate": "52SCD4515",
+    "location_name": "함흥 17호 공장 (고체연료 배합동)",
+    "detected_objects": [
+      {"type": "배합기_고온열원", "count": 3},
+      {"type": "지원차량", "count": 5},
+      {"type": "경비병력", "count": 8}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "함흥 17호 공장 고체추진제 배합동 3개소에서 동시 가동 열원 포착. 배합 완료 단계 추정. KN-23/25 대량 생산 또는 화성-18 2단 추진제 충전 준비 중 판단.",
+    "confidence_level": 4,
+    "analyst_name": "김○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-b-002",
+    "timestamp_captured": "2026-06-18T09:15:00Z",
+    "timestamp_analyzed": "2026-06-18T12:00:00Z",
+    "sensor_type": "EO",
+    "source_platform": "상용위성 Maxar WorldView-3",
+    "MGRS_coordinate": "52SCD4514",
+    "location_name": "함흥 11호 공장 (KN-23 동체 조립동)",
+    "detected_objects": [
+      {"type": "KN-23_동체_추정", "count": 4},
+      {"type": "조립지그", "count": 2},
+      {"type": "크레인", "count": 1},
+      {"type": "지원차량", "count": 7}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "함흥 11호 공장 외부 야적장에서 KN-23 동체 추정 원통형 물체(길이 7.5m, 직경 0.9m) 4기 포착. 조립 완료 단계. 해당 시설은 과거 KN-23 배치 1년 전 최초 포착 장소와 동일.",
+    "confidence_level": 3,
+    "analyst_name": "박○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-b-003",
+    "timestamp_captured": "2026-07-02T20:30:00Z",
+    "timestamp_analyzed": "2026-07-02T23:45:00Z",
+    "sensor_type": "SAR",
+    "source_platform": "425 위성 1호(SAR)",
+    "MGRS_coordinate": "52SDC0505",
+    "location_name": "원산 갈마 해안 전개지",
+    "detected_objects": [
+      {"type": "궤도형_TEL", "count": 2},
+      {"type": "지원차량", "count": 4},
+      {"type": "경비차량", "count": 2}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "원산 갈마 해안 야전 전개지에서 TEL 2기 야간 기동 포착. SAR 영상 분석 결과 궤도형 발사차(KN-23 전용 TEL 특성)와 일치. 해안 방향 발사 준비 자세. 지원차량 배치로 보아 발사 24-48시간 전 상태.",
+    "confidence_level": 5,
+    "analyst_name": "최○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-b-004",
+    "timestamp_captured": "2026-07-03T10:00:00Z",
+    "timestamp_analyzed": "2026-07-03T13:30:00Z",
+    "sensor_type": "EO",
+    "source_platform": "상용위성 플래닛랩스(SkySat)",
+    "MGRS_coordinate": "52SDC1008",
+    "location_name": "알섬 (가상 관측지점)",
+    "detected_objects": [
+      {"type": "관측소_텐트", "count": 3},
+      {"type": "카메라_삼각대_추정", "count": 5},
+      {"type": "차량", "count": 2}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "알섬 관측지점에 이동식 텐트 3동과 촬영장비 추정 삼각대 5기 설치 확인. 과거 KN-23 발사 시 동일 위치에 촬영팀 전개한 사례 있음. 발사 직전 공개용 촬영팀 배치로 판단.",
+    "confidence_level": 3,
+    "analyst_name": "이○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-h-001",
+    "timestamp_captured": "2025-09-12T06:00:00Z",
+    "timestamp_analyzed": "2025-09-12T09:00:00Z",
+    "sensor_type": "SAR",
+    "source_platform": "425 위성 1호(SAR)",
+    "MGRS_coordinate": "52SDD1812",
+    "location_name": "신포 조선소 (잠수함 기지)",
+    "detected_objects": [
+      {"type": "신포급_잠수함", "count": 1},
+      {"type": "지원선", "count": 2},
+      {"type": "연료차량", "count": 3}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "신포 잠수함 기지에서 신포-C급 추정 잠수함 1척 계류 해제, 지원선 2척 동반 동해 방면 출항 확인. SLBM 준비 시 항상 지원선 동반 출항 패턴과 일치. 출항 2-3일 후 발사 역사적 패턴 적용.",
+    "confidence_level": 4,
+    "analyst_name": "김○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-h-002",
+    "timestamp_captured": "2022-03-23T12:00:00Z",
+    "timestamp_analyzed": "2022-03-23T15:30:00Z",
+    "sensor_type": "EO",
+    "source_platform": "상용위성 Maxar WorldView-3",
+    "MGRS_coordinate": "52SCC9118",
+    "location_name": "순안 비행장 (화성-17 발사거점)",
+    "detected_objects": [
+      {"type": "11축_대형_TEL", "count": 3},
+      {"type": "연료주입차", "count": 6},
+      {"type": "경호차량", "count": 8},
+      {"type": "발사대", "count": 1}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "순안 비행장 활주로에 11축 대형 TEL 3기 전개 포착. 연료주입차 6대 배치. 활주로 폐쇄, 경호차량 8대 배치로 고위급 현지시찰 동반 발사 추정. 화성-17 최초 실전배치 발사 전 동일 패턴.",
+    "confidence_level": 5,
+    "analyst_name": "박○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-h-003",
+    "timestamp_captured": "2024-11-04T08:00:00Z",
+    "timestamp_analyzed": "2024-11-04T11:00:00Z",
+    "sensor_type": "SAR",
+    "source_platform": "425 위성 1호(SAR)",
+    "MGRS_coordinate": "52SDD2510",
+    "location_name": "호도반도 KN-25 집결지",
+    "detected_objects": [
+      {"type": "KN-25_TEL", "count": 18},
+      {"type": "탄약지원차", "count": 9},
+      {"type": "지휘차", "count": 3}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "호도반도 야전 집결지 KN-25 TEL 18기 대규모 집결 포착. SAR 분석 결과 이전 최대 집결(2019년 6기)의 3배. 전방 전개를 위한 중간 집결지로 판단. 발사 12-24시간 전 분산 전개 예상.",
+    "confidence_level": 4,
+    "analyst_name": "최○○",
+    "analyst_unit": "777사령부 영상처리반"
+  },
+  {
+    "id": "imint-h-004",
+    "timestamp_captured": "2025-03-21T06:00:00Z",
+    "timestamp_analyzed": "2025-03-21T09:30:00Z",
+    "sensor_type": "EO",
+    "source_platform": "425 위성(EO/IR 복합)",
+    "MGRS_coordinate": "52SBC7822",
+    "location_name": "산음동 미사일 공장 (화성-19 출고)",
+    "detected_objects": [
+      {"type": "신형_대형발사체_동체", "count": 1},
+      {"type": "15축_대형_TEL_추정", "count": 1},
+      {"type": "지원차량", "count": 10},
+      {"type": "크레인", "count": 2}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "산음동 공장에서 화성-17보다 약 20% 더 길고 굵은 신형 발사체 동체 출고. 15축 추정 신형 대형 TEL 탑재 중. 과거 사례 없는 신규 TEL 차종. 화성-19로 잠정 분류. 순안 방면 수송 예상.",
+    "confidence_level": 3,
+    "analyst_name": "정○○",
+    "analyst_unit": "DIA Korea 분석팀"
+  },
+  {
+    "id": "imint-h-005",
+    "timestamp_captured": "2026-06-30T23:00:00Z",
+    "timestamp_analyzed": "2026-07-01T02:00:00Z",
+    "sensor_type": "IR",
+    "source_platform": "425 위성(SAR/IR 복합체)",
+    "MGRS_coordinate": "52SDD3018",
+    "location_name": "코크산 포병기지",
+    "detected_objects": [
+      {"type": "TEL_열원", "count": 6},
+      {"type": "차량_열원", "count": 12},
+      {"type": "건물_열원", "count": 3}
+    ],
+    "unusual_activity_flag": true,
+    "semantic_analysis": "코크산 포병기지 야간 TEL 활동 급증. IR 분석 결과 6기의 TEL이 기동 중(엔진 열원 감지). 주간 최대 2기에서 야간 6기로 급증. 전방 전개 준비 또는 은폐기동 훈련으로 판단.",
+    "confidence_level": 3,
+    "analyst_name": "이○○",
+    "analyst_unit": "777사령부 영상처리반"
+  }
+]

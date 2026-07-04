@@ -1,0 +1,155 @@
+{
+  "scenario-a-500": {
+    "hypotheses": [
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.38, "uncertainty": 0.25, "evidenceChain": ["엔진시험장 활동"]},
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.22, "uncertainty": 0.35, "evidenceChain": ["잠진 엔진시험"]},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.18, "uncertainty": 0.40, "evidenceChain": ["엔진시험 열원"]},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.10, "uncertainty": 0.20, "evidenceChain": []},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM)", "category": "missile_launch", "prior": 0.16, "posterior": 0.06, "uncertainty": 0.45, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.03, "uncertainty": 0.50, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.02, "uncertainty": 0.55, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.01, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.38, "uncertainty": 0.25, "evidenceChain": ["엔진시험장 활동"]},
+    "overallConfidence": 0.35,
+    "updatedAt": "2026-06-15T06:00:00Z",
+    "evidenceCount": 1
+  },
+  "scenario-a-1500": {
+    "hypotheses": [
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.45, "uncertainty": 0.22, "evidenceChain": ["잠진 엔진시험", "만포 산화제 탱크로리 집결", "함흥 UDMH 공장 가동"]},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.28, "uncertainty": 0.28, "evidenceChain": ["산화제 생산", "엔진시험"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.14, "uncertainty": 0.30, "evidenceChain": ["엔진시험"]},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.05, "uncertainty": 0.25, "evidenceChain": []},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM)", "category": "missile_launch", "prior": 0.16, "posterior": 0.04, "uncertainty": 0.50, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.02, "uncertainty": 0.55, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.01, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.01, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.45, "uncertainty": 0.22, "evidenceChain": ["잠진 엔진시험", "만포 산화제 탱크로리 집결", "함흥 UDMH 공장 가동"]},
+    "overallConfidence": 0.60,
+    "updatedAt": "2026-06-22T12:00:00Z",
+    "evidenceCount": 3
+  },
+  "scenario-a-3000": {
+    "hypotheses": [
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.72, "uncertainty": 0.15, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립"]},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.18, "uncertainty": 0.20, "evidenceChain": ["연료주입", "발사대 직립"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.05, "uncertainty": 0.35, "evidenceChain": []},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.02, "uncertainty": 0.30, "evidenceChain": []},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM)", "category": "missile_launch", "prior": 0.16, "posterior": 0.02, "uncertainty": 0.55, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.01, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.00, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.75, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.72, "uncertainty": 0.15, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립"]},
+    "overallConfidence": 0.80,
+    "updatedAt": "2026-06-28T16:00:00Z",
+    "evidenceCount": 5
+  },
+  "scenario-a-5000": {
+    "hypotheses": [
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.91, "uncertainty": 0.06, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립", "SA-2 방공 가동", "통신 급증", "드론 텔레메트리", "발사통제 최종 교신"]},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.07, "uncertainty": 0.18, "evidenceChain": ["연료주입", "발사대 직립"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.01, "uncertainty": 0.40, "evidenceChain": []},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.01, "uncertainty": 0.35, "evidenceChain": []},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM)", "category": "missile_launch", "prior": 0.16, "posterior": 0.00, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.00, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.75, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.80, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.91, "uncertainty": 0.06, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립", "SA-2 방공 가동", "통신 급증", "드론 텔레메트리", "발사통제 최종 교신"]},
+    "overallConfidence": 0.92,
+    "updatedAt": "2026-07-04T07:50:00Z",
+    "evidenceCount": 9
+  },
+  "scenario-a-6500": {
+    "hypotheses": [
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.97, "uncertainty": 0.02, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립", "SA-2 방공 가동", "통신 급증", "드론 텔레메트리", "발사통제 최종 교신", "KAMD 항적 탐지", "OSINT 사후 보도"]},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.02, "uncertainty": 0.15, "evidenceChain": []},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.01, "uncertainty": 0.45, "evidenceChain": []},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.00, "uncertainty": 0.40, "evidenceChain": []},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM)", "category": "missile_launch", "prior": 0.16, "posterior": 0.00, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.00, "uncertainty": 0.75, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.80, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.85, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.97, "uncertainty": 0.02, "evidenceChain": ["잠진 엔진시험", "산화제 수송", "동창리 TEL 이동", "바지선 접안", "발사대 직립", "SA-2 방공 가동", "통신 급증", "드론 텔레메트리", "발사통제 최종 교신", "KAMD 항적 탐지", "OSINT 사후 보도"]},
+    "overallConfidence": 0.98,
+    "updatedAt": "2026-07-04T09:00:00Z",
+    "evidenceCount": 11
+  },
+  "scenario-b-500": {
+    "hypotheses": [
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.35, "uncertainty": 0.28, "evidenceChain": ["함흥 공장 활동"]},
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.30, "uncertainty": 0.30, "evidenceChain": ["KN-23 동체 조립 징후"]},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.15, "uncertainty": 0.40, "evidenceChain": ["고체연료 배합 활동"]},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.10, "uncertainty": 0.25, "evidenceChain": []},
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.05, "uncertainty": 0.50, "evidenceChain": []},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.03, "uncertainty": 0.55, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.02, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.75, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.35, "uncertainty": 0.28, "evidenceChain": ["함흥 공장 활동"]},
+    "overallConfidence": 0.40,
+    "updatedAt": "2026-06-10T23:00:00Z",
+    "evidenceCount": 1
+  },
+  "scenario-b-1500": {
+    "hypotheses": [
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.58, "uncertainty": 0.18, "evidenceChain": ["KN-23 동체 조립", "TEL 야간 기동", "전방 전개 징후", "함흥 공장 가동"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.18, "uncertainty": 0.32, "evidenceChain": ["차량 이동"]},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.12, "uncertainty": 0.38, "evidenceChain": ["고체연료 활동"]},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.06, "uncertainty": 0.28, "evidenceChain": []},
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.03, "uncertainty": 0.55, "evidenceChain": []},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.02, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.01, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.72, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.78, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.58, "uncertainty": 0.18, "evidenceChain": ["KN-23 동체 조립", "TEL 야간 기동", "전방 전개 징후", "함흥 공장 가동"]},
+    "overallConfidence": 0.70,
+    "updatedAt": "2026-07-02T21:00:00Z",
+    "evidenceCount": 4
+  },
+  "scenario-b-3500": {
+    "hypotheses": [
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.84, "uncertainty": 0.08, "evidenceChain": ["KN-23 동체 조립", "TEL 전방 전개", "UAV Lock-on(TEL 직립)", "SA-2 방공 가동", "발사통제 교신 급증", "드론 텔레메트리"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.07, "uncertainty": 0.35, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.05, "uncertainty": 0.42, "evidenceChain": []},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.02, "uncertainty": 0.30, "evidenceChain": []},
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.01, "uncertainty": 0.60, "evidenceChain": []},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.01, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.78, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.82, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.84, "uncertainty": 0.08, "evidenceChain": ["KN-23 동체 조립", "TEL 전방 전개", "UAV Lock-on(TEL 직립)", "SA-2 방공 가동", "발사통제 교신 급증", "드론 텔레메트리"]},
+    "overallConfidence": 0.85,
+    "updatedAt": "2026-07-04T08:05:00Z",
+    "evidenceCount": 6
+  },
+  "scenario-b-5000": {
+    "hypotheses": [
+      {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.96, "uncertainty": 0.03, "evidenceChain": ["KN-23 동체 조립", "TEL 전방 전개", "UAV Lock-on(TEL 직립)", "SA-2 방공 가동", "발사통제 교신 급증", "드론 텔레메트리", "KAMD 항적 탐지", "발사 영상 UAV 확인", "노동신문 사후 보도"]},
+      {"id": "h-exercise", "name": "군사훈련/연습", "category": "exercise", "prior": 0.18, "posterior": 0.02, "uncertainty": 0.40, "evidenceChain": []},
+      {"id": "h-solid-long", "name": "고체연료 중장거리 미사일(IRBM/ICBM)", "category": "missile_launch", "prior": 0.10, "posterior": 0.01, "uncertainty": 0.48, "evidenceChain": []},
+      {"id": "h-normal", "name": "정상 활동 (오탐)", "category": "normal", "prior": 0.10, "posterior": 0.01, "uncertainty": 0.35, "evidenceChain": []},
+      {"id": "h-satellite", "name": "우주발사체(정찰위성) 발사", "category": "missile_launch", "prior": 0.10, "posterior": 0.00, "uncertainty": 0.65, "evidenceChain": []},
+      {"id": "h-liquid-long", "name": "액체연료 중장거리 미사일(ICBM/IRBM)", "category": "missile_launch", "prior": 0.13, "posterior": 0.00, "uncertainty": 0.70, "evidenceChain": []},
+      {"id": "h-liquid-short", "name": "액체연료 단거리 미사일", "category": "missile_launch", "prior": 0.07, "posterior": 0.00, "uncertainty": 0.75, "evidenceChain": []},
+      {"id": "h-slbm", "name": "SLBM 잠수함 발사 미사일", "category": "missile_launch", "prior": 0.04, "posterior": 0.00, "uncertainty": 0.80, "evidenceChain": []},
+      {"id": "h-provocation", "name": "비미사일 군사도발", "category": "provocation", "prior": 0.06, "posterior": 0.00, "uncertainty": 0.85, "evidenceChain": []}
+    ],
+    "topHypothesis": {"id": "h-solid-short", "name": "고체연료 단거리 미사일(SRBM: KN-23/24/25)", "category": "missile_launch", "prior": 0.16, "posterior": 0.96, "uncertainty": 0.03, "evidenceChain": ["KN-23 동체 조립", "TEL 전방 전개", "UAV Lock-on(TEL 직립)", "SA-2 방공 가동", "발사통제 교신 급증", "드론 텔레메트리", "KAMD 항적 탐지", "발사 영상 UAV 확인", "노동신문 사후 보도"]},
+    "overallConfidence": 0.97,
+    "updatedAt": "2026-07-05T07:00:00Z",
+    "evidenceCount": 9
+  }
+}

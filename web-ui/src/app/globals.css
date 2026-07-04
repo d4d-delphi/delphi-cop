@@ -10,6 +10,19 @@
   --friendly-blue: #3b82f6;
   --friendly-green: #10b981;
   --ai-gold: #f59e0b;
+
+  /* Elevation layers */
+  --layer-0: #0a0e1a;   /* 페이지 배경 */
+  --layer-1: #0d1117;   /* 패널 배경 */
+  --layer-2: #111827;   /* 모달/팝업 배경 */
+  --layer-3: #1f2937;   /* 활성 카드/드롭다운 */
+
+  /* Semantic colors (독점 사용) */
+  --tactical-threat: #ef4444;   /* 전술 위협 전용 red */
+  --system-error: #f472b6;      /* 시스템 에러 전용 pink */
+  --ai-analysis: #f59e0b;       /* AI 분석 전용 amber */
+  --friendly: #3b82f6;          /* 아군 blue */
+  --humint-color: #a3e635;      /* HUMINT 전용 lime-400 */
 }
 
 body {

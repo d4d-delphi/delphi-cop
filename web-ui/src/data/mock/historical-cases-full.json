@@ -1,0 +1,649 @@
+[
+  {
+    "id": "case-1984-01",
+    "date": "1984-04-09",
+    "title": "스커드-B 최초 시험발사",
+    "missileType": "SRBM (스커드-B)",
+    "indicators": ["TEL 이동", "연료주입", "시험장 경계 강화"],
+    "outcome": "1발 발사, 비행거리 300km. 소련제 스커드 역설계 성공 확인.",
+    "description": "북한 최초의 탄도미사일 시험발사. 소련에서 도입한 스커드-B를 역설계해 독자생산한 모델. 비교적 간단한 준비과정으로 발사.",
+    "provocation": {
+      "yearly_launch_seq": "1984-01",
+      "launch_time": "1984-04-09 10:00",
+      "launch_count": 1,
+      "weapon_class": "SRBM",
+      "kn_designation": "스커드-B",
+      "visual_indicators": [
+        {"date": "1984-04-08", "time": "09:00", "location": "함흥 미사일 시험장", "activity": "TEL 1기 시험장 이동 포착"},
+        {"date": "1984-04-08", "time": "20:00", "location": "함흥 미사일 시험장", "activity": "연료주입 차량 배치 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "1984-04-09", "time": "09:50", "location": "함흥", "activity": "발사통제소 교신 증가"}
+      ]
+    }
+  },
+  {
+    "id": "case-1993-05",
+    "date": "1993-05-29",
+    "title": "노동-1 중거리 미사일 최초 발사",
+    "missileType": "MRBM (노동-1)",
+    "indicators": ["대형 TEL 이동", "액체연료 주입", "동해안 전개", "발사통제 교신"],
+    "outcome": "1발 발사, 비행거리 500km. 일본 본토 타격 가능 사거리 확인.",
+    "description": "노동-1형 중거리 탄도미사일 최초 시험발사. 일본 전역 타격 가능한 사거리로 한미일 안보 위협 증대. 발사 72시간 전 TEL 이동 포착.",
+    "provocation": {
+      "yearly_launch_seq": "1993-01",
+      "launch_time": "1993-05-29 09:05",
+      "launch_count": 1,
+      "weapon_class": "MRBM",
+      "kn_designation": "노동-1",
+      "visual_indicators": [
+        {"date": "1993-05-26", "time": "14:00", "location": "무수단리", "activity": "대형 TEL 격납고 외부 이동"},
+        {"date": "1993-05-28", "time": "16:00", "location": "무수단리", "activity": "연료주입 차량 4대 배치 확인"},
+        {"date": "1993-05-29", "time": "07:00", "location": "무수단리", "activity": "발사대 직립, 발사 준비 완료 추정"}
+      ],
+      "signal_indicators": [
+        {"date": "1993-05-28", "time": "22:00", "location": "무수단리", "activity": "발사통제소 VHF 교신 급증"},
+        {"date": "1993-05-29", "time": "09:00", "location": "무수단리", "activity": "발사 직전 최종 카운트다운 신호"}
+      ]
+    }
+  },
+  {
+    "id": "case-1998-08",
+    "date": "1998-08-31",
+    "title": "대포동-1 발사 (광명성-1 위성 주장)",
+    "missileType": "IRBM (대포동-1 / SLV)",
+    "indicators": ["대형 발사대 조립", "산화제 주입", "국제해사기구 항행경보", "방송 예고"],
+    "outcome": "발사했으나 3단 분리 실패. 북한은 위성 발사 성공 주장.",
+    "description": "대포동-1(백두산-1) 발사. 공식적으로 광명성-1 인공위성 발사 시도. 3단이 일본 본토 상공 통과 후 태평양 낙하. IAEA 사찰과 연계된 외교적 사건.",
+    "provocation": {
+      "yearly_launch_seq": "1998-01",
+      "launch_time": "1998-08-31 12:07",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "대포동-1",
+      "visual_indicators": [
+        {"date": "1998-08-20", "time": "10:00", "location": "무수단리 발사장", "activity": "대형 조립동 내 동체 조립 징후"},
+        {"date": "1998-08-28", "time": "14:00", "location": "무수단리 발사장", "activity": "발사대 직립 및 산화제 주입 차량 집결"},
+        {"date": "1998-08-30", "time": "18:00", "location": "무수단리", "activity": "경비병력 배치 및 보안구역 강화"}
+      ],
+      "signal_indicators": [
+        {"date": "1998-08-30", "time": "09:00", "location": "평양", "activity": "국제해사기구(IMO) 항행경보 발령 신호 포착"},
+        {"date": "1998-08-31", "time": "11:00", "location": "무수단리", "activity": "발사 직전 발사통제 교신 집중"}
+      ]
+    }
+  },
+  {
+    "id": "case-2006-07",
+    "date": "2006-07-05",
+    "title": "대포동-2 등 7발 동시 발사",
+    "missileType": "ICBM+IRBM+SRBM 혼합 (대포동-2, 스커드, 노동)",
+    "indicators": ["다수 TEL 동시 이동", "3개 발사장 동시 준비", "연료주입 동시 진행", "외교 채널 경고 거부"],
+    "outcome": "대포동-2는 비행 40초 만에 실패. 나머지 6발 중 일부 성공. 강력한 도발 의지 시위.",
+    "description": "미국 독립기념일(7.4)에 맞춘 동시다발 발사. 7발 중 대포동-2(ICBM급)는 40초 만에 실패. 무수단리, 강원도, 동해안 3개 거점 동시 발사. UN 안보리 결의 1695호 채택.",
+    "provocation": {
+      "yearly_launch_seq": "2006-01",
+      "launch_time": "2006-07-05 03:32~07:12",
+      "launch_count": 7,
+      "weapon_class": "ICBM",
+      "kn_designation": "대포동-2",
+      "visual_indicators": [
+        {"date": "2006-06-20", "time": "10:00", "location": "무수단리", "activity": "대포동-2 발사대 조립 징후"},
+        {"date": "2006-07-01", "time": "08:00", "location": "강원도 해안", "activity": "스커드/노동 TEL 다수 이동"},
+        {"date": "2006-07-04", "time": "20:00", "location": "무수단리 외 2개소", "activity": "연료주입 최종 단계 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2006-07-03", "time": "14:00", "location": "평양", "activity": "외교채널 통한 발사 경고에 무응답"},
+        {"date": "2006-07-05", "time": "03:00", "location": "복수 발사장", "activity": "동시 발사통제 교신 포착"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2006-01",
+      "targeting_process": "KAMD 체계로 7개 항적 동시 추적. 주일미군 AN/TPY-2 레이더 실시간 공유.",
+      "response_action": "UN 안보리 긴급회의 소집. 한미 연합 대응태세 격상.",
+      "bda_result": "대포동-2 발사 실패 확인. 나머지 6발 동해 낙하 확인."
+    }
+  },
+  {
+    "id": "case-2009-04",
+    "date": "2009-04-05",
+    "title": "은하-2 발사 (광명성-2 위성 주장)",
+    "missileType": "IRBM/SLV (은하-2)",
+    "indicators": ["동창리 발사대 조립", "국제항행경보 발령", "바지선 접안", "위성 궤도 발표"],
+    "outcome": "발사. 1단 서해 낙하, 2단 일본 상공 통과 후 태평양 낙하. 위성 궤도 진입 실패.",
+    "description": "동창리(서해위성발사장) 최초 사용 발사. 사전에 국제해사기구에 항행경보를 발령하여 사전 탐지 가능. UN 안보리 의장성명 채택.",
+    "provocation": {
+      "yearly_launch_seq": "2009-01",
+      "launch_time": "2009-04-05 11:30",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "은하-2",
+      "visual_indicators": [
+        {"date": "2009-03-12", "time": "10:00", "location": "동창리", "activity": "새 발사대 완공 및 동체 조립 징후"},
+        {"date": "2009-03-25", "time": "14:00", "location": "동창리", "activity": "바지선 접안, 연료 공급 차량 집결"},
+        {"date": "2009-04-04", "time": "20:00", "location": "동창리", "activity": "발사대 직립, 최종 연료주입"}
+      ],
+      "signal_indicators": [
+        {"date": "2009-03-12", "time": "08:00", "location": "평양 해사기구", "activity": "IMO에 항행경보 발령 (사전 탐지 가능 조건)"},
+        {"date": "2009-04-05", "time": "11:00", "location": "동창리", "activity": "발사통제소 최종 교신"}
+      ]
+    }
+  },
+  {
+    "id": "case-2012-12",
+    "date": "2012-12-12",
+    "title": "은하-3 (광명성-3 위성) 발사 성공",
+    "missileType": "SLV (은하-3)",
+    "indicators": ["동창리 발사대 조립 완료", "국제항행경보", "바지선 접안", "연료주입 IR 포착", "방송 준비"],
+    "outcome": "발사 성공. 광명성-3 위성 궤도 진입. 북한 최초 궤도 위성 발사 성공.",
+    "description": "2012년 4월 발사 실패 후 재시도. 12월 12일 성공. 광명성-3 2호기 위성 궤도 진입 확인. ICBM 기술 확보 입증.",
+    "provocation": {
+      "yearly_launch_seq": "2012-02",
+      "launch_time": "2012-12-12 09:49",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "은하-3",
+      "visual_indicators": [
+        {"date": "2012-12-03", "time": "10:00", "location": "동창리", "activity": "발사체 조립 완료, 직립 이동 시작"},
+        {"date": "2012-12-08", "time": "14:00", "location": "동창리", "activity": "바지선 접안, 산화제 공급"},
+        {"date": "2012-12-11", "time": "20:00", "location": "동창리", "activity": "최종 연료주입, IR 고온 열원 감지"}
+      ],
+      "signal_indicators": [
+        {"date": "2012-12-03", "time": "08:00", "location": "평양", "activity": "IMO 국제항행경보 발령"},
+        {"date": "2012-12-12", "time": "09:00", "location": "동창리", "activity": "발사 직전 특이 교신 급증"},
+        {"date": "2012-12-12", "time": "09:45", "location": "평양", "activity": "조선중앙TV 특별방송 준비 징후"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2012-02",
+      "targeting_process": "한미 양국 이지스함 SM-3 대기. 궤도 진입 확인 시 요격 포기.",
+      "response_action": "UN 안보리 결의 2087호 채택. 한미 연합 연습 강화.",
+      "bda_result": "위성 궤도 진입 확인. 요격 시도 없음. NORAD 추적 번호 부여."
+    }
+  },
+  {
+    "id": "case-2014-03",
+    "date": "2014-03-26",
+    "title": "KN-02 개량형 SRBM 발사",
+    "missileType": "SRBM (KN-02)",
+    "indicators": ["소형 TEL 이동", "고체연료 특성", "단시간 준비"],
+    "outcome": "2발 발사, 동해 낙하. 고체연료 단거리 능력 확인.",
+    "description": "KN-02(토차카-우 개량형) 첫 공개 발사. 고체연료로 준비시간 단축. 정확도 향상. 전술 핵 운반체 가능성 시사.",
+    "provocation": {
+      "yearly_launch_seq": "2014-01",
+      "launch_time": "2014-03-26 05:00",
+      "launch_count": 2,
+      "weapon_class": "SRBM",
+      "kn_designation": "KN-02",
+      "visual_indicators": [
+        {"date": "2014-03-25", "time": "20:00", "location": "강원도 전방", "activity": "소형 TEL 2기 이동 포착 (사후 확인)"}
+      ],
+      "signal_indicators": [
+        {"date": "2014-03-26", "time": "04:55", "location": "강원도", "activity": "최소 교신 후 즉각 발사"}
+      ]
+    }
+  },
+  {
+    "id": "case-2016-02",
+    "date": "2016-02-07",
+    "title": "광명성-4 위성 발사",
+    "missileType": "SLV (광명성/은하 계열)",
+    "indicators": ["동창리 발사대 조립", "국제항행경보", "바지선 접안", "연료주입 완료", "방송 예고"],
+    "outcome": "발사 성공. 광명성-4 궤도 진입. UN 안보리 결의 2270호.",
+    "description": "4차 핵실험(2016.1.6) 직후 발사. 동창리 서해위성발사장에서 남향 발사. 사전 국제통보로 요격 불가. ICBM 기술 상당 수준 달성.",
+    "provocation": {
+      "yearly_launch_seq": "2016-01",
+      "launch_time": "2016-02-07 09:30",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "광명성-4",
+      "visual_indicators": [
+        {"date": "2016-01-30", "time": "10:00", "location": "동창리", "activity": "발사체 조립동 활동 증가"},
+        {"date": "2016-02-04", "time": "14:00", "location": "동창리", "activity": "바지선 접안, 산화제 공급 시작"},
+        {"date": "2016-02-06", "time": "22:00", "location": "동창리", "activity": "최종 연료주입 IR 고온 열원 감지"}
+      ],
+      "signal_indicators": [
+        {"date": "2016-02-02", "time": "08:00", "location": "평양", "activity": "IMO 국제항행경보 발령 (2.8-2.25 창 공지)"},
+        {"date": "2016-02-07", "time": "09:00", "location": "동창리", "activity": "발사 직전 카운트다운 교신"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2016-01",
+      "targeting_process": "한미 PAC-3, SM-3 대기. 남향 발사로 요격 회피.",
+      "response_action": "THAAD 배치 협의 가속화. UN 안보리 긴급 소집.",
+      "bda_result": "궤도 진입 확인. 요격 시도 없음."
+    }
+  },
+  {
+    "id": "case-2016-06",
+    "date": "2016-06-22",
+    "title": "무수단(BM-25) 최초 발사 성공",
+    "missileType": "IRBM (무수단/BM-25)",
+    "indicators": ["중형 TEL 이동", "액체연료 주입", "동해안 전개", "고각 발사 궤적"],
+    "outcome": "6월 22일 2번째 시도 성공. 비행거리 400km(고각), 최고고도 1,413km. 괌 타격 능력 확인.",
+    "description": "2016년 무수단 8차 발사 시도 중 1차 성공. 소련 R-27 기반. 2016.4-8월간 8차 발사 시도 중 1차만 성공. 기술 신뢰도 문제 노출.",
+    "provocation": {
+      "yearly_launch_seq": "2016-04",
+      "launch_time": "2016-06-22 09:00",
+      "launch_count": 2,
+      "weapon_class": "IRBM",
+      "kn_designation": "무수단(BM-25)",
+      "visual_indicators": [
+        {"date": "2016-06-21", "time": "10:00", "location": "원산", "activity": "중형 TEL 2기 동해안 이동"},
+        {"date": "2016-06-22", "time": "06:00", "location": "원산 해안", "activity": "연료주입 차량 배치 및 발사대 직립"}
+      ],
+      "signal_indicators": [
+        {"date": "2016-06-22", "time": "08:00", "location": "원산", "activity": "발사통제소 특이 교신 증가"},
+        {"date": "2016-06-22", "time": "08:55", "location": "원산", "activity": "발사 직전 최종 교신"}
+      ]
+    }
+  },
+  {
+    "id": "case-2016-08-slbm",
+    "date": "2016-08-24",
+    "title": "북극성-1형 SLBM 발사",
+    "missileType": "SLBM (북극성-1)",
+    "indicators": ["잠수함 출항", "해상 보안구역 설정", "수중 활동 증가"],
+    "outcome": "발사 성공, 비행거리 500km",
+    "description": "신포급 잠수함에서 SLBM 발사. 출항 48시간 전부터 항만 활동 증가 포착.",
+    "provocation": {
+      "yearly_launch_seq": "2016-05",
+      "launch_time": "2016-08-24 05:30",
+      "launch_count": 1,
+      "weapon_class": "SLBM",
+      "kn_designation": "북극성-1",
+      "visual_indicators": [
+        {"date": "2016-08-22", "time": "09:00", "location": "신포", "activity": "잠수함 항만 내 이동, 지원선박 활동 증가"},
+        {"date": "2016-08-23", "time": "14:00", "location": "신포 앞바다", "activity": "잠수함 출항 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2016-08-23", "time": "16:00", "location": "동해", "activity": "해상 보안구역 설정 통신 포착"},
+        {"date": "2016-08-24", "time": "05:00", "location": "동해", "activity": "수중 음향 이상 및 잠수함 교신"}
+      ]
+    }
+  },
+  {
+    "id": "case-2017-05",
+    "date": "2017-05-14",
+    "title": "화성-12형 IRBM 최초 발사",
+    "missileType": "IRBM (화성-12)",
+    "indicators": ["대형 TEL 이동", "신형 미사일 동체 조립", "연료주입", "고각 발사 궤적"],
+    "outcome": "발사 성공, 비행거리 787km, 고도 2,111km. 괌 타격 가능 사거리 확인.",
+    "description": "화성-12형 최초 시험발사 성공. 서태평양 미군 기지(괌) 타격 가능 IRBM. 이후 화성-14 ICBM으로의 가교 역할.",
+    "provocation": {
+      "yearly_launch_seq": "2017-01b",
+      "launch_time": "2017-05-14 05:28",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "화성-12",
+      "visual_indicators": [
+        {"date": "2017-05-12", "time": "14:00", "location": "구성", "activity": "신형 대형 TEL 이동 포착"},
+        {"date": "2017-05-13", "time": "18:00", "location": "구성", "activity": "신형 미사일 동체 발사대 직립 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2017-05-13", "time": "22:00", "location": "구성", "activity": "발사통제 교신 급증"},
+        {"date": "2017-05-14", "time": "05:20", "location": "구성", "activity": "발사 직전 카운트다운 교신"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2017-01b",
+      "targeting_process": "KAMD 그린파인 레이더 최초 항적 포착. 비행 분석 결과 괌 사거리 이내 확인.",
+      "response_action": "한미 PAC-3 추적. 요격 판단 미실시(고각 발사).",
+      "bda_result": "동해 안전수역 낙하 확인."
+    }
+  },
+  {
+    "id": "case-2017-07-a",
+    "date": "2017-07-04",
+    "title": "화성-14형 ICBM 최초 발사",
+    "missileType": "ICBM (화성-14)",
+    "indicators": ["TEL 이동", "연료주입", "발사대 직립", "통신량 증가", "고위급 현지지도"],
+    "outcome": "발사 성공, 비행거리 933km, 고도 2,802km",
+    "description": "2017년 7월 4일 무수단리 기지에서 화성-14형 ICBM 발사. 발사 48시간 전 TEL 이동, 24시간 전 연료주입.",
+    "provocation": {
+      "yearly_launch_seq": "2017-01",
+      "launch_time": "2017-07-04 09:40",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-14",
+      "visual_indicators": [
+        {"date": "2017-07-02", "time": "10:00", "location": "무수단리", "activity": "TEL 격납고 외부 이동 포착"},
+        {"date": "2017-07-03", "time": "14:00", "location": "무수단리", "activity": "연료주입 차량 배치, 발사대 직립 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2017-07-03", "time": "18:00", "location": "무수단리", "activity": "고위급 현지지도 관련 보안 교신 급증"},
+        {"date": "2017-07-04", "time": "09:30", "location": "무수단리", "activity": "발사 직전 최종 교신"}
+      ]
+    }
+  },
+  {
+    "id": "case-2017-11",
+    "date": "2017-11-29",
+    "title": "화성-15형 ICBM 발사",
+    "missileType": "ICBM (화성-15)",
+    "indicators": ["대형 TEL 이동", "연료주입", "발사대 직립", "김정은 현지시찰", "방송 사전준비"],
+    "outcome": "발사 성공, 비행거리 960km, 고도 4,475km, 미 본토 도달 능력 과시",
+    "description": "화성-15형은 화성-14형 대비 대형화. 발사 36시간 전부터 징후 포착.",
+    "provocation": {
+      "yearly_launch_seq": "2017-03",
+      "launch_time": "2017-11-29 03:17",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-15",
+      "visual_indicators": [
+        {"date": "2017-11-27", "time": "14:00", "location": "평성", "activity": "신형 9축 대형 TEL 이동 포착"},
+        {"date": "2017-11-28", "time": "20:00", "location": "평성", "activity": "발사대 직립 및 연료주입 진행 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2017-11-28", "time": "22:00", "location": "평성", "activity": "김정은 현지지도 관련 보안 통신 포착"},
+        {"date": "2017-11-29", "time": "02:00", "location": "평성", "activity": "조선중앙TV 특별방송 사전준비 신호"}
+      ]
+    }
+  },
+  {
+    "id": "case-2019-05",
+    "date": "2019-05-09",
+    "title": "KN-23 기습발사 (최초)",
+    "missileType": "SRBM (KN-23)",
+    "indicators": ["소규모 차량 이동", "단시간 준비", "통신 최소화"],
+    "outcome": "2발 발사, 비행거리 420km/270km. 이스칸데르 유사 기동.",
+    "description": "고체연료 단거리 미사일 최초 발사. 준비시간 극히 짧아 사전탐지 어려움.",
+    "provocation": {
+      "yearly_launch_seq": "2019-02",
+      "launch_time": "2019-05-09 16:29",
+      "launch_count": 2,
+      "weapon_class": "SRBM",
+      "kn_designation": "KN-23",
+      "visual_indicators": [
+        {"date": "2019-05-09", "time": "15:00", "location": "원산", "activity": "소형 차량 소규모 이동 (사후 확인)"}
+      ],
+      "signal_indicators": [
+        {"date": "2019-05-09", "time": "16:25", "location": "원산", "activity": "최소 통신 후 즉각 발사"}
+      ]
+    }
+  },
+  {
+    "id": "case-2019-08",
+    "date": "2019-08-24",
+    "title": "KN-25 초대형 방사포 최초 발사",
+    "missileType": "SRBM (KN-25 초대형 방사포)",
+    "indicators": ["다수 TEL 이동", "고체연료 특성", "단시간 준비", "복수 동시 발사"],
+    "outcome": "6발 발사, 비행거리 380km. 대량 투발 능력 과시.",
+    "description": "600mm 구경 초대형 방사포(KN-25). 실질적으로 SRBM 성능. 주한미군 기지 전역 사거리 내. 대량 동시 발사로 요격 난이도 급증.",
+    "provocation": {
+      "yearly_launch_seq": "2019-04",
+      "launch_time": "2019-08-24 06:45",
+      "launch_count": 6,
+      "weapon_class": "SRBM",
+      "kn_designation": "KN-25",
+      "visual_indicators": [
+        {"date": "2019-08-24", "time": "05:30", "location": "선천", "activity": "KN-25 TEL 6기 이동 포착 (사후 확인)"},
+        {"date": "2019-08-24", "time": "06:30", "location": "선천", "activity": "발사 준비 완료 추정"}
+      ],
+      "signal_indicators": [
+        {"date": "2019-08-24", "time": "06:40", "location": "선천", "activity": "발사 직전 단시간 교신"}
+      ]
+    }
+  },
+  {
+    "id": "case-2022-03",
+    "date": "2022-03-24",
+    "title": "화성-17형 ICBM 발사",
+    "missileType": "ICBM (화성-17)",
+    "indicators": ["11축 TEL 이동", "대형 발사대 직립", "연료주입", "보안구역 설정", "항공기 우회지시"],
+    "outcome": "발사 성공, 비행시간 71분, 고도 6,248km",
+    "description": "최대 사거리의 ICBM. 평양 순안 인근에서 발사. 대형 11축 TEL 최초 운용.",
+    "provocation": {
+      "yearly_launch_seq": "2022-03",
+      "launch_time": "2022-03-24 14:34",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-17",
+      "visual_indicators": [
+        {"date": "2022-03-23", "time": "10:00", "location": "순안", "activity": "11축 대형 TEL 이동 포착"},
+        {"date": "2022-03-24", "time": "12:00", "location": "순안", "activity": "발사대 직립 및 연료주입 차량 배치 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2022-03-24", "time": "13:00", "location": "순안", "activity": "보안구역 설정 통신, 인근 항공기 우회 지시"},
+        {"date": "2022-03-24", "time": "14:30", "location": "순안", "activity": "발사 직전 교신 급증"}
+      ]
+    }
+  },
+  {
+    "id": "case-2022-10",
+    "date": "2022-10-04",
+    "title": "화성-12형 일본 상공 통과",
+    "missileType": "IRBM (화성-12)",
+    "indicators": ["TEL 이동", "동해안 전개", "연료주입", "비행궤적 동쪽"],
+    "outcome": "일본 상공 통과, 비행거리 4,600km, 태평양 낙하",
+    "description": "무수단리에서 동쪽 방향 발사, 일본 열도 상공 통과.",
+    "provocation": {
+      "yearly_launch_seq": "2022-06",
+      "launch_time": "2022-10-04 07:22",
+      "launch_count": 1,
+      "weapon_class": "IRBM",
+      "kn_designation": "화성-12",
+      "visual_indicators": [
+        {"date": "2022-10-03", "time": "15:00", "location": "무수단리", "activity": "TEL 동해안 방향 전개"},
+        {"date": "2022-10-04", "time": "05:00", "location": "무수단리", "activity": "연료주입 차량 배치 확인"}
+      ],
+      "signal_indicators": [
+        {"date": "2022-10-04", "time": "07:15", "location": "무수단리", "activity": "발사 직전 교신 및 해상보안구역 설정"}
+      ]
+    }
+  },
+  {
+    "id": "case-2022-11",
+    "date": "2022-11-18",
+    "title": "화성-17형 ICBM 2차 발사 성공",
+    "missileType": "ICBM (화성-17)",
+    "indicators": ["11축 TEL 이동", "순안 활주로 차단", "연료주입", "고위급 관찰"],
+    "outcome": "발사 성공, 비행시간 69분, 고도 6,041km. 미 본토 전역 타격 능력 재확인.",
+    "description": "11월 18일 순안 발사. 김정은이 딸 김주애 동반 참관. MIRV 탑재 가능성 시사.",
+    "provocation": {
+      "yearly_launch_seq": "2022-08",
+      "launch_time": "2022-11-18 10:14",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-17",
+      "visual_indicators": [
+        {"date": "2022-11-17", "time": "08:00", "location": "순안", "activity": "11축 TEL 격납고 이탈 이동"},
+        {"date": "2022-11-18", "time": "07:00", "location": "순안", "activity": "활주로 차단, 발사대 직립, 연료주입 완료"}
+      ],
+      "signal_indicators": [
+        {"date": "2022-11-18", "time": "09:00", "location": "순안", "activity": "고위급 방문 관련 보안 통신 포착"},
+        {"date": "2022-11-18", "time": "10:00", "location": "순안", "activity": "발사 직전 카운트다운 교신"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2022-08",
+      "targeting_process": "KAMD 체계 조기 탐지. 주일미군 AN/TPY-2 공동 추적.",
+      "response_action": "한미 공군 무력시위 비행. 핵항모 로널드레이건함 재전개.",
+      "bda_result": "동해 공해상 낙하 확인."
+    }
+  },
+  {
+    "id": "case-2023-07",
+    "date": "2023-07-12",
+    "title": "화성-18형 고체 ICBM 1차 발사",
+    "missileType": "ICBM (화성-18, 고체)",
+    "indicators": ["TEL 이동", "발사대 직립", "연료주입 징후 없음", "단시간 준비"],
+    "outcome": "발사 성공, 비행시간 74분, 고체연료로 탐지 시간 단축",
+    "description": "고체연료 ICBM으로 연료주입 시간 불필요. 탐지-발사 시간 대폭 단축.",
+    "provocation": {
+      "yearly_launch_seq": "2023-04",
+      "launch_time": "2023-07-12 09:01",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-18",
+      "visual_indicators": [
+        {"date": "2023-07-12", "time": "08:45", "location": "평안남도", "activity": "TEL 직립 포착 (16분 전)"}
+      ],
+      "signal_indicators": []
+    }
+  },
+  {
+    "id": "case-2023-12",
+    "date": "2023-12-18",
+    "title": "화성-18형 고체 ICBM 2차 발사",
+    "missileType": "ICBM (화성-18, 고체)",
+    "indicators": ["TEL 이동", "발사대 직립", "15분 내 발사", "사전 징후 최소"],
+    "outcome": "발사 성공, 고체연료 신속발사 능력 재확인",
+    "description": "고체연료 ICBM 2차 발사. 이동식 발사대에서 15분 이내 발사 완료. 탐지 어려움 재확인.",
+    "provocation": {
+      "yearly_launch_seq": "2023-07",
+      "launch_time": "2023-12-18 08:24",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-18",
+      "visual_indicators": [
+        {"date": "2023-12-18", "time": "08:10", "location": "평양 인근", "activity": "대형 TEL 직립 포착 (발사 14분 전)"}
+      ],
+      "signal_indicators": [
+        {"date": "2023-12-18", "time": "08:20", "location": "평양", "activity": "최소 교신 후 즉각 발사"}
+      ]
+    }
+  },
+  {
+    "id": "case-2024-01",
+    "date": "2024-01-14",
+    "title": "화성포-11형 극초음속 미사일",
+    "missileType": "극초음속 (화성포-11)",
+    "indicators": ["소형 TEL 이동", "단시간 준비", "활공체 분리 징후"],
+    "outcome": "비행거리 1000km, 극초음속 활공체 기동 확인",
+    "description": "극초음속 활공체 탑재 미사일. 기존 탄도미사일 대비 요격 난이도 높음.",
+    "provocation": {
+      "yearly_launch_seq": "2024-01",
+      "launch_time": "2024-01-14 07:10",
+      "launch_count": 1,
+      "weapon_class": "HGV",
+      "kn_designation": "화성포-11",
+      "visual_indicators": [
+        {"date": "2024-01-13", "time": "16:00", "location": "평양 인근", "activity": "소형 TEL 1기 이동 포착"}
+      ],
+      "signal_indicators": [
+        {"date": "2024-01-14", "time": "07:05", "location": "평양", "activity": "발사 직전 단시간 교신 포착"}
+      ]
+    }
+  },
+  {
+    "id": "case-2024-11",
+    "date": "2024-11-05",
+    "title": "KN-25 초대형 방사포 대규모 투발",
+    "missileType": "SRBM (KN-25)",
+    "indicators": ["다수 TEL 집결", "전방 전개", "고체연료 특성", "복수 동시 발사"],
+    "outcome": "18발 동시 발사. 포화타격 개념 실증.",
+    "description": "18발 동시 발사로 KAMD 포화 개념 실증. 전방 각지에서 시차를 두지 않고 동시 발사. 현 KAMD 체계 포화 가능성 제기.",
+    "provocation": {
+      "yearly_launch_seq": "2024-05",
+      "launch_time": "2024-11-05 08:30",
+      "launch_count": 18,
+      "weapon_class": "SRBM",
+      "kn_designation": "KN-25",
+      "visual_indicators": [
+        {"date": "2024-11-03", "time": "10:00", "location": "전방 복수 위치", "activity": "KN-25 TEL 다수 분산 전개"},
+        {"date": "2024-11-04", "time": "14:00", "location": "전방", "activity": "TEL 18기 준비 완료 추정"}
+      ],
+      "signal_indicators": [
+        {"date": "2024-11-05", "time": "08:20", "location": "전방 복수", "activity": "복수 지점 동시 교신 급증"},
+        {"date": "2024-11-05", "time": "08:25", "location": "전방", "activity": "발사 직전 동시 카운트다운"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2024-05",
+      "targeting_process": "KAMD 동시 18개 항적 추적 실시. PAC-3 포대 대기 상태 유지.",
+      "response_action": "대응 타격 시뮬레이션 실시. 현무-4 발사 훈련 병행.",
+      "bda_result": "18발 동해 낙하 확인. KAMD 포화 임계치 도달 확인."
+    }
+  },
+  {
+    "id": "case-2025-03",
+    "date": "2025-03-22",
+    "title": "화성-19형 ICBM 최초 발사",
+    "missileType": "ICBM (화성-19)",
+    "indicators": ["신형 대형 TEL 이동", "산화제 주입", "고위급 관찰 징후", "보안구역 설정"],
+    "outcome": "발사 성공. 비행시간 86분. 신형 MIRV 탑재체 확인.",
+    "description": "화성-17보다 대형화된 신형 ICBM. MIRV(다탄두) 탑재 구조 변경 확인. 최고고도 7,687km. 미 CJCS 긴급 브리핑 실시.",
+    "provocation": {
+      "yearly_launch_seq": "2025-02",
+      "launch_time": "2025-03-22 09:30",
+      "launch_count": 1,
+      "weapon_class": "ICBM",
+      "kn_designation": "화성-19",
+      "visual_indicators": [
+        {"date": "2025-03-20", "time": "10:00", "location": "순안", "activity": "신형 대형 TEL(15축 추정) 이동 포착"},
+        {"date": "2025-03-21", "time": "18:00", "location": "순안", "activity": "산화제 주입 차량 대규모 집결"},
+        {"date": "2025-03-22", "time": "07:00", "location": "순안", "activity": "발사대 직립, 연료주입 완료 추정"}
+      ],
+      "signal_indicators": [
+        {"date": "2025-03-21", "time": "14:00", "location": "순안", "activity": "고위급 방문 보안 통신 급증"},
+        {"date": "2025-03-22", "time": "09:00", "location": "순안", "activity": "발사 직전 최종 카운트다운 교신"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2025-02",
+      "targeting_process": "KAMD 최초 탐지. 한미일 3국 실시간 데이터 공유. 85분간 추적.",
+      "response_action": "한미 핵협의그룹(NCG) 긴급회의. 전략자산 전개 명령.",
+      "bda_result": "동해 공해상 낙하 확인. 신형 MIRV 분리체 2기 포착."
+    }
+  },
+  {
+    "id": "case-2025-09",
+    "date": "2025-09-15",
+    "title": "북극성-3 SLBM 2차 발사",
+    "missileType": "SLBM (북극성-3)",
+    "indicators": ["신포 잠수함 출항", "해상 SIGINT 이상", "수중 발사 징후"],
+    "outcome": "발사 성공, 비행거리 1,900km. 수중 2,000km급 능력 확인.",
+    "description": "개량형 신포-C급 잠수함에서 발사. 기존 북극성-1보다 4배 이상 사거리. 일본 EEZ 내 낙하.",
+    "provocation": {
+      "yearly_launch_seq": "2025-05",
+      "launch_time": "2025-09-15 04:20",
+      "launch_count": 1,
+      "weapon_class": "SLBM",
+      "kn_designation": "북극성-3",
+      "visual_indicators": [
+        {"date": "2025-09-12", "time": "08:00", "location": "신포", "activity": "개량형 잠수함 출항, 지원선 동반"},
+        {"date": "2025-09-13", "time": "16:00", "location": "동해", "activity": "잠수함 동해 북방 해역 이동 포착"}
+      ],
+      "signal_indicators": [
+        {"date": "2025-09-14", "time": "20:00", "location": "동해", "activity": "해상 SIGINT 이상 포착, 수중 통신 증가"},
+        {"date": "2025-09-15", "time": "04:00", "location": "동해 북방", "activity": "수중 발사 직전 음향 이상"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2025-05",
+      "targeting_process": "P-8A 초계기 수중 탐지 시도. 발사 후 비행 추적 성공.",
+      "response_action": "이지스함 SM-3 추적 대기. 요격 결심 미실시.",
+      "bda_result": "일본 EEZ 내 낙하 확인. 국제 항의 및 UN 안보리 소집."
+    }
+  },
+  {
+    "id": "case-2026-04",
+    "date": "2026-07-04",
+    "title": "KN-23 SRBM 2발 발사 (원산 갈마)",
+    "missileType": "SRBM (KN-23)",
+    "indicators": ["TEL 전개", "산화제 주입", "무전 급증", "촬영용 드론 텔레메트리", "SA-2 레이더 가동"],
+    "outcome": "2발 발사, 동해상 NLL 이북 탄착. 아군 F-15K 무력시위 대응.",
+    "description": "원산 갈마 해안가에서 궤도형 TEL 2기 전개 후 KN-23 2발 발사. 발사 2일 전 TEL 전개 포착, 발사 10분 전 드론 신호와 무전 급증.",
+    "provocation": {
+      "yearly_launch_seq": "2026-04",
+      "launch_time": "2026-07-04 08:15 ~ 08:42",
+      "launch_count": 2,
+      "weapon_class": "SRBM",
+      "kn_designation": "KN-23",
+      "visual_indicators": [
+        {"date": "2026-07-02", "time": "14:30", "location": "원산 갈마", "activity": "궤도형 TEL 2기 해안가 전개 식별"},
+        {"date": "2026-07-03", "time": "11:00", "location": "원산 갈마", "activity": "산화제/추진제 주입 추정 지원차량 4대 식별"}
+      ],
+      "signal_indicators": [
+        {"date": "2026-07-04", "time": "08:05", "location": "원산 앞바다", "activity": "촬영용 소형 무인기 텔레메트리 신호 포착"},
+        {"date": "2026-07-04", "time": "08:10", "location": "원산 기지", "activity": "발사통제소-연구원 VHF 무전 교신량 3배 이상 급증"}
+      ]
+    },
+    "friendlyAction": {
+      "related_launch_seq": "2026-04",
+      "targeting_process": "KAMD 체계(그린파인) 08:16 최초 항적 탐지, 중앙방공통제소(MCRC) 표적 융합 및 전파",
+      "response_action": "09:00 경 공군 F-15K 4대 출격, 동해상에서 AGM-84H(슬램이알) 공대지 미사일 실사격 무력시위",
+      "bda_result": "적 발사체 2발 모두 동해상 NLL 이북 탄착 확인. 아군 공대지 사격 성공적으로 가상 표적 명중."
+    }
+  }
+]
