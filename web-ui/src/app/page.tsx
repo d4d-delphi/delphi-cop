@@ -262,6 +262,7 @@ export default function Home() {
         <div className="w-[20%] min-w-[240px]">
           <EnemyPanel
             events={scenario.timeline}
+            phases={scenario.phases}
             currentTime={currentTime}
             inferenceResult={inferenceResult}
           />

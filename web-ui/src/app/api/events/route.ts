@@ -3,6 +3,12 @@ import { createClient } from '@supabase/supabase-js';
 import { toPoint } from 'mgrs';
 import { ActionClassType, Coordinates, TimelineEvent } from '@/types';
 
+// 관측 데이터는 실시간 값이어야 하므로 라우트/fetch 캐시를 끈다.
+// (GET 라우트 핸들러는 기본 캐시 대상이고, supabase-js의 내부 fetch도
+//  Next Data Cache에 저장돼 DB 재시드 후에도 옛 스냅샷을 계속 응답한다.)
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 // Read the shared "Delphi" Supabase project directly from Next.js (server-side),
 // replacing the old FastAPI hop. Env now lives in web-ui/.env.local — the
 // service-role key is server-only and never shipped to the browser.
