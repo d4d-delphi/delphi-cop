@@ -43,10 +43,10 @@ UNITS = [
     ('제3군단 (산악)', 'army_corps', 'army', 'rok', '동부전선(태백 산악/동해안) — 대북 제1군단 대치', '인제', '지상 전력', 'high', None, []),
     ('제7기동군단', 'mobile_corps', 'army', 'rok', '육군 유일 기동군단 — 종심 기동 타격', '의정부', '기갑/기계화', 'high', None, []),
     # ── 미사일·방공 사령부 ──
-    ('미사일전략사령부', 'missile_cmd', 'army', 'rok', '한국형 3축 킬체인/KMPR 원점 타격 (현무)', '원주', '현무-2/3/4/5', 'high', None, []),
-    ('공군미사일방어사령부', 'air_defense_cmd', 'air', 'rok', 'KAMD 다층 요격 (PAC/천궁/L-SAM)', '대구', 'PAC-2/3, 천궁-II(M-SAM), L-SAM', 'high', None, []),
-    ('사드(THAAD) 기지', 'sam_base', 'air', 'combined', '한미 연합 고고도 요격 (사드)', '성주', 'THAAD', 'high', '공군미사일방어사령부', []),
-    ('LAMD(한국형 아이언돔)', 'air_defense_cmd', 'air', 'rok', '수도권 장사정포 요격 (개발/배치)', '서울', 'LAMD', 'medium', '공군미사일방어사령부', []),
+    ('미사일전략사령부', 'missile_cmd', 'army', 'rok', '한국형 3축 킬체인/KMPR 원점 타격 (현무)', '원주', '현무-2/3/4/5', 'high', None, [('육군미사일사령부', 'colloquial')]),
+    ('미사일방어사령부', 'air_defense_cmd', 'air', 'rok', 'KAMD 다층 요격 (PAC/천궁/L-SAM)', '대구', 'PAC-2/3, 천궁-II(M-SAM), L-SAM', 'high', None, [('공군방공유도탄사령부', 'colloquial'), ('공군미사일방어사령부', 'colloquial')]),
+    ('사드(THAAD) 기지', 'sam_base', 'air', 'combined', '한미 연합 고고도 요격 (사드)', '성주', 'THAAD', 'high', '미사일방어사령부', []),
+    ('LAMD(한국형 아이언돔)', 'air_defense_cmd', 'air', 'rok', '수도권 장사정포 요격 (개발/배치)', '서울', 'LAMD', 'medium', '미사일방어사령부', []),
     # ── SIGINT (777사령부/주한미군) ──
     ('지상 SIGINT 기지 (수도권 전방)', 'sigint', 'army', 'rok', '777사령부 고정식 대북 감청 (평양-원산선)', '파주', 'SIGINT (고정식)', 'high', None, []),
     ('지상 SIGINT 기지 (동부 전방)', 'sigint', 'army', 'rok', '북한 1군단/동해 해군 무선 수집', '속초', 'SIGINT (고정식)', 'high', None, []),
