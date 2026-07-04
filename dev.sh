@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
 # Run both DELPHI dev servers locally:
-#   - FastAPI backend  -> http://localhost:8000  (docs at /docs)
-#   - Next.js frontend -> http://localhost:3000
+#   - FastAPI backend (backend_app) -> http://localhost:8000  (docs at /docs)
+#   - Next.js frontend (web-ui)     -> http://localhost:3000  (API viewer at /server)
 #
 # Usage:
 #   ./dev.sh
@@ -12,7 +12,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BACKEND_DIR="$ROOT/backend"
+BACKEND_DIR="$ROOT/backend_app"
 FRONTEND_DIR="$ROOT/web-ui"
 
 BACKEND_PORT=8000
@@ -55,14 +55,16 @@ if [ ! -d ".venv" ]; then
   # shellcheck disable=SC1091
   source .venv/bin/activate
   pip install --quiet --upgrade pip
-  pip install --quiet -r requirements-dev.txt
+  pip install --quiet -r requirements.txt
 else
   # shellcheck disable=SC1091
   source .venv/bin/activate
 fi
 
-if [ ! -f ".env" ]; then
-  echo "    WARNING: backend/.env missing — copy .env.example and fill Supabase keys."
+# backend_app is read-only and serves a pre-built Stage-2 cache. Warn (don't fail)
+# if it's missing — rebuild with: python scripts/recache.py --reuse-abox
+if [ ! -f "cache/belief_snapshot.jsonl" ]; then
+  echo "    WARNING: cache/ missing — run 'python scripts/recache.py --reuse-abox' in backend_app."
 fi
 
 uvicorn app.main:app --reload --port "$BACKEND_PORT" &
@@ -85,8 +87,8 @@ npm run dev &
 pids+=($!)
 
 echo ""
-echo "==> Backend:  http://localhost:$BACKEND_PORT/docs"
-echo "==> Frontend: http://localhost:$FRONTEND_PORT"
+echo "==> Backend:  http://localhost:$BACKEND_PORT/docs   (health: /health)"
+echo "==> Frontend: http://localhost:$FRONTEND_PORT        (API viewer: /server)"
 echo "==> Press Ctrl-C to stop both."
 
 wait

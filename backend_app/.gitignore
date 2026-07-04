@@ -3,3 +3,5 @@ __pycache__/
 cache/*
 !cache/.gitkeep
 _topids.txt
+.next/
+

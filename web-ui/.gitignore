@@ -51,3 +51,4 @@ data/
 # (data/ 규칙이 디렉토리째 무시하므로 !부정규칙은 안 통함 → 최초 git add -f 필수.)
 # source of truth는 supabase → 재생성: bash supabase/seed/export_all_mirrors.sh
 # 새 미러 추가 시 git add -f src/data/<name>.json 으로 추적.
+.env*
