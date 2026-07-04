@@ -513,6 +513,22 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
             },
           });
           addLabelEntity(Cesium, viewer, id, pos, u.designation, '#9ca3af', 'rgba(10,14,26,0.72)');
+          // SA-5 장거리 방공 위협반경(150km, 흰색 투명 원)
+          if (u.designation.includes('SA-5')) {
+            viewer.entities.add({
+              id: `${id}-radius`,
+              position: pos,
+              ellipse: {
+                semiMinorAxis: 150000,
+                semiMajorAxis: 150000,
+                material: Cesium.Color.WHITE.withAlpha(0.07),
+                outline: true,
+                outlineColor: Cesium.Color.WHITE.withAlpha(0.3),
+                outlineWidth: 1,
+                height: 0,
+              },
+            });
+          }
         });
     });
 
