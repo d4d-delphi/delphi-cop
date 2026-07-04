@@ -14,5 +14,6 @@ fi
 
 echo "[serve] DELPHI API on http://$HOST:$PORT  (docs: /docs, health: /health)"
 # Optional extra uvicorn flags via UVICORN_ARGS (word-split); empty by default.
+# The ${arr[@]+...} guard keeps `set -u` happy on bash 3.2 (macOS) empty arrays.
 read -r -a UVICORN_EXTRA <<< "${UVICORN_ARGS:-}"
-exec uvicorn app.main:app --host "$HOST" --port "$PORT" "${UVICORN_EXTRA[@]}"
+exec uvicorn app.main:app --host "$HOST" --port "$PORT" ${UVICORN_EXTRA[@]+"${UVICORN_EXTRA[@]}"}
