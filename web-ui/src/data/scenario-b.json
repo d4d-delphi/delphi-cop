@@ -102,7 +102,7 @@
     },
     {
       "id": "f-isr-geumgang",
-      "name": "금강 정찰기(RC-800)",
+      "name": "RC-800G(금강)",
       "type": "ISR",
       "position": { "lat": 37.3, "lng": 126.2 },
       "status": "ready",

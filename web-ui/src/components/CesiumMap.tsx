@@ -240,10 +240,11 @@ function addLabelEntity(
   });
 }
 
-// Continuous patrol motion for recon assets (정찰기 / 정찰선). Aircraft fly a wide
-// racetrack orbit; ships crawl a slow, tight patrol box. Driven by performance.now()
-// so it animates every frame without React re-renders (same approach as the event
-// pulse). Returns Cesium properties for the entity position and billboard heading.
+// Continuous patrol motion for recon assets (정찰기 / 정찰선). 정찰기(air)는 8자
+// (Lemniscate) 궤도로 체공하며 접적지역을 지속 감시 — 원형 racetrack보다 좁은
+// 공역에서 센서 탐지거리를 유지할 수 있다. 함정(sea)은 기존 racetrack(타원)
+// 순찰을 유지한다. performance.now()로 매 프레임 구동(React 재렌더 없이 애니메이션).
+// Returns Cesium properties for the entity position and billboard heading.
 function patrolMotion(
   Cesium: any,
   base: { lat: number; lng: number },
@@ -251,25 +252,46 @@ function patrolMotion(
   seed: number,
 ) {
   const coslat = Math.cos((base.lat * Math.PI) / 180) || 1;
-  // Ellipse radii in degrees of latitude (rLng > rLat → elongated racetrack).
-  const rLat = profile === 'air' ? 0.32 : 0.06;
-  const rLng = profile === 'air' ? 0.55 : 0.11;
-  const period = profile === 'air' ? 26000 : 72000; // ms per full loop
+  const isAir = profile === 'air';
+  // Lemniscate(air): lat = rLat·sin(a), lng = rLng·sin(a)·cos(a)/coslat.
+  //   위도는 ±rLat, 경도는 ±rLng/2 (sin·cos peak=0.5) → 남북으로 겹친 두 루프.
+  // Racetrack(sea): 타원 순찰 유지.
+  const rLat = isAir ? 0.30 : 0.06;
+  const rLng = isAir ? 0.90 : 0.11;
+  const period = isAir ? 26000 : 72000; // ms per full loop
   const w = (2 * Math.PI) / period;
   const phase = seed * 1.7; // desync assets so they don't fly in lockstep
 
   const position = new Cesium.CallbackProperty(() => {
     const a = w * performance.now() + phase;
-    const lat = base.lat + rLat * Math.cos(a);
-    const lng = base.lng + (rLng * Math.sin(a)) / coslat;
+    let lat: number;
+    let lng: number;
+    if (isAir) {
+      const s = Math.sin(a);
+      const c = Math.cos(a);
+      lat = base.lat + rLat * s;
+      lng = base.lng + (rLng * s * c) / coslat;
+    } else {
+      lat = base.lat + rLat * Math.cos(a);
+      lng = base.lng + (rLng * Math.sin(a)) / coslat;
+    }
     return Cesium.Cartesian3.fromDegrees(lng, lat, 0);
   }, false);
 
-  // Heading = tangent of the ellipse, so the glyph faces its direction of travel.
+  // Heading = tangent of the curve, so the glyph faces its direction of travel.
+  // air(lemniscate): d(lat)/da = rLat·cos(a); d(lng)/da = rLng·cos(2a)/coslat
+  //   → 동류거리 vEast ∝ rLng·cos(2a) (coslat 상쇄), 북 vNorth ∝ rLat·cos(a).
   const rotation = new Cesium.CallbackProperty(() => {
     const a = w * performance.now() + phase;
-    const vEast = rLng * Math.cos(a); // ∝ d(east)/dt
-    const vNorth = -rLat * Math.sin(a); // ∝ d(north)/dt
+    let vEast: number;
+    let vNorth: number;
+    if (isAir) {
+      vEast = rLng * Math.cos(2 * a);
+      vNorth = rLat * Math.cos(a);
+    } else {
+      vEast = rLng * Math.cos(a);
+      vNorth = -rLat * Math.sin(a);
+    }
     const bearing = Math.atan2(vEast, vNorth); // 0 = north, +clockwise
     return -bearing; // Cesium billboard rotation is CCW-positive; glyphs point north
   }, false);
@@ -522,7 +544,9 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
       }
     });
 
-    // Friendly assets (blue)
+    // Friendly assets. 항공기/함정(ISR·FIGHTER·UAV·SHIP)은 청색 마커로 활성 자산을 강조하고,
+    // COMMAND(지상 지휘·센서 기지 — 777사령부 SIGINT, 그린파인 레이더 등)와 MISSILE은
+    // 무채색(회색)으로 처리하여 파란색 과도 도드라짐을 방지. 적·아군 구분은 심볼 모양/위치.
     scenario.friendlies.forEach((friendly: FriendlyAsset, i: number) => {
       const profile: 'air' | 'sea' | null =
         friendly.type === 'SHIP'
@@ -535,11 +559,15 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
         ? motion.position
         : Cesium.Cartesian3.fromDegrees(friendly.position.lng, friendly.position.lat, 0);
 
+      const isGroundSite = friendly.type === 'COMMAND' || friendly.type === 'MISSILE';
+      const fFill = isGroundSite ? '#555555' : '#3b82f6';
+      const fOutline = isGroundSite ? '#334155' : '#22d3ee';
+
       viewer.entities.add({
         id: friendly.id,
         position,
         billboard: {
-          image: markerCanvas(FRIENDLY_SYMBOL[friendly.type] || 'circle', '#3b82f6', '#22d3ee'),
+          image: markerCanvas(FRIENDLY_SYMBOL[friendly.type] || 'circle', fFill, fOutline),
           scale: 1,
           verticalOrigin: Cesium.VerticalOrigin.CENTER,
           ...(motion ? { rotation: motion.rotation } : {}),
@@ -598,7 +626,9 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
         });
     });
 
-    // 아군(ROK/USFK) 전투서열 부대 마커 — 청색(공수 양면). 정밀 좌표 비공개 → 행정구역 수준.
+    // 아군(ROK/USFK) 전투서열 부대 마커 — 무채색(회색) 톤. 정밀 좌표 비공개 → 행정구역 수준.
+    // SIGINT(777사령부 등)를 포함한 아군 지상 부대는 청색 대신 무채색으로 처리하여
+    // 파란색이 지도에서 과도하게 도드라지는 것을 방지. 적·아군 구분은 심볼 모양과 위치로.
     loadFriendlyFormations().then((units) => {
       units
         .filter((u) => u.hqLat != null && u.hqLng != null)
@@ -612,7 +642,7 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
             id,
             position: pos,
             billboard: {
-              image: markerCanvas(FORMATION_SYMBOL[u.formationType] || 'circle', '#475569', outline),
+              image: markerCanvas(FORMATION_SYMBOL[u.formationType] || 'circle', '#555555', outline),
               scale: 0.9,
               verticalOrigin: Cesium.VerticalOrigin.CENTER,
             },

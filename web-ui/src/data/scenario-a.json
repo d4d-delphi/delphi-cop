@@ -45,7 +45,7 @@
     },
     {
       "id": "f-isr-geumgang",
-      "name": "금강 정찰기(RC-800)",
+      "name": "RC-800G(금강)",
       "type": "ISR",
       "position": { "lat": 37.3, "lng": 126.2 },
       "status": "ready",
@@ -60,15 +60,6 @@
       "status": "ready",
       "capability": "SPY 레이더 항적 추적",
       "details": "이지스 구축함, 서해 해상 탐지·추적 지원"
-    },
-    {
-      "id": "f-baekdu",
-      "name": "백두 정찰기",
-      "type": "ISR",
-      "position": { "lat": 37.6, "lng": 126.9 },
-      "status": "standby",
-      "capability": "COMINT/신호정보",
-      "details": "긴급 출격 대기. 발사통제소 교신 정밀 수집"
     }
   ],
   "timeline": [
