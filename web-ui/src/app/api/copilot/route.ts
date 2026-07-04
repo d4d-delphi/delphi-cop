@@ -9,7 +9,7 @@ import {
 } from '@/lib/emitter';
 import { searchSimilarCases } from '@/lib/rag';
 import { mapDoctrineContext, formatDoctrineForPrompt } from '@/lib/doctrine';
-import { generateBriefing } from '@/lib/claude';
+import { generateWithOpenAI } from '@/lib/openai';
 import {
   UseCase,
   UseCaseCategory,
@@ -174,20 +174,15 @@ export async function POST(request: NextRequest) {
       posterior,
     });
 
-    // === 5. LLM 호출(키 불필요 폴백) ===
+    // === 5. LLM 호출(OpenAI, 키 불필요 폴백) ===
     let llmAnswer: string | null = null;
     try {
-      // generateBriefing 은 ANTHROPIC_API_KEY 환경이 없으면 예외 → 폴백.
-      const historicalContext = similarCases
-        .slice(0, 5)
-        .map(
-          (c) =>
-            `- ${c.title} (${c.date}, ${c.missileType}): ${c.indicators?.join(', ') ?? ''} → ${c.outcome}`
-        )
-        .join('\n');
-      llmAnswer = await generateBriefing(prompt, historicalContext);
+      llmAnswer = await generateWithOpenAI(
+        '당신은 대한민국 합참 정보분석관 AI 코파일럿이다. 주어진 온톨로지/교리/과거사례/신호해석 컨텍스트를 근거로 삼아, 지휘관의 질의에 간결하고 정량적으로 답하라. 추론 근거(obs_id/사례/교리)를 명시하라.',
+        prompt,
+      );
     } catch {
-      llmAnswer = null; // Claude API 미설정 — 컨텍스트/템플릿만 반환
+      llmAnswer = null; // OPENAI_API_KEY 미설정 등 — 컨텍스트/템플릿만 반환
     }
 
     // NOTE: 엄격 타입 단언을 피해 brief/route.ts 패턴대로 객체를 조립해 반환한다.
