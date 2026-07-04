@@ -158,7 +158,9 @@ export default function Home() {
         setCurrentTime((prev) => {
           let next = prev + PLAYBACK_STEP_BASE * speed; // 기본 배속 × (빨리감기 시 5)
           const phase = scenario.phases.find((p) => prev >= p.startTime && prev < p.endTime);
-          if (phase) {
+          // 빨리감기(speed > 1)에서는 징후 게이트 체류를 건너뛴다 — 게이트마다
+          // 멈추면 빨리감기의 목적(빠른 훑기)이 사라지므로, 1x 재생에서만 dwell 적용.
+          if (phase && speed === 1) {
             const gate = phaseGate.get(phase.id);
             if (gate && next > gate.ts) {
               if (!holdRef.current || holdRef.current.phaseId !== phase.id) {
