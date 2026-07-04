@@ -13,4 +13,6 @@ if [ ! -f "$ROOT/cache/belief_snapshot.jsonl" ]; then
 fi
 
 echo "[serve] DELPHI API on http://$HOST:$PORT  (docs: /docs, health: /health)"
-exec uvicorn app.main:app --host "$HOST" --port "$PORT" "${UVICORN_ARGS:-}"
+# Optional extra uvicorn flags via UVICORN_ARGS (word-split); empty by default.
+read -r -a UVICORN_EXTRA <<< "${UVICORN_ARGS:-}"
+exec uvicorn app.main:app --host "$HOST" --port "$PORT" "${UVICORN_EXTRA[@]}"
