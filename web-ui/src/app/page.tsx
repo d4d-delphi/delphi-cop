@@ -194,9 +194,9 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Center - Live Clock */}
+        {/* Center - Simulation Clock (재생 시각에 동기화된 관측 일자) */}
         <div className="absolute left-1/2 -translate-x-1/2">
-          <LiveClock />
+          <SimClock timeline={scenario.timeline} currentTime={currentTime} speed={speed} isPlaying={isPlaying} />
         </div>
 
         <div className="flex items-center gap-3 text-xs text-gray-500">
@@ -251,22 +251,61 @@ export default function Home() {
   );
 }
 
-// 실시간 시계 — 상단 중앙, 시간이 흐르고 있음을 강조
-function LiveClock() {
-  const [now, setNow] = useState(new Date());
-  useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(id);
-  }, []);
+// 재생 시각(currentTime)을 관측 타임라인의 실제 일자로 환산한다.
+// 각 이벤트의 collectedAt(정본 시간축)을 재생 timestamp에 맞춰 선형 보간하므로,
+// 재생/빨리감기 진행에 따라 날짜가 함께 흐른다. 이벤트 부재 시 null.
+function simDateFromTimeline(timeline: TimelineEvent[], currentTime: number): Date | null {
+  const evs = timeline
+    .filter((e) => e.collectedAt)
+    .map((e) => ({ t: e.timestamp, ms: new Date(e.collectedAt as string).getTime() }))
+    .filter((e) => Number.isFinite(e.ms))
+    .sort((a, b) => a.t - b.t);
+  if (evs.length === 0) return null;
+  if (currentTime <= evs[0].t) return new Date(evs[0].ms);
+  for (let i = 0; i < evs.length - 1; i++) {
+    const a = evs[i];
+    const b = evs[i + 1];
+    if (currentTime >= a.t && currentTime <= b.t) {
+      const f = (currentTime - a.t) / (b.t - a.t || 1);
+      return new Date(a.ms + (b.ms - a.ms) * f);
+    }
+  }
+  return new Date(evs[evs.length - 1].ms);
+}
+
+// 시뮬레이션 시계 — 상단 중앙, 재생 시각에 동기화된 관측 일자(날짜만)를 표시.
+function SimClock({
+  timeline,
+  currentTime,
+  speed,
+  isPlaying,
+}: {
+  timeline: TimelineEvent[];
+  currentTime: number;
+  speed: number;
+  isPlaying: boolean;
+}) {
+  const date = useMemo(() => simDateFromTimeline(timeline, currentTime), [timeline, currentTime]);
+  const fast = isPlaying && speed > 1;
   return (
     <div className="flex items-center gap-2 px-3 py-0.5 rounded-md bg-amber-950/30 border border-amber-900/40">
-      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-      <span className="font-mono text-[11px] text-amber-400/70 tracking-wide tabular-nums">
-        {now.toLocaleDateString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short' })}
-      </span>
+      <span className={`w-1.5 h-1.5 rounded-full bg-amber-400 ${isPlaying ? 'animate-pulse' : ''}`}></span>
+      <span className="font-mono text-[11px] text-amber-400/70 tracking-wide tabular-nums">관측일자</span>
       <span className="font-mono text-base font-bold tracking-widest tabular-nums text-amber-300 [text-shadow:0_0_8px_rgba(251,191,36,0.4)]">
-        {now.toLocaleTimeString('ko-KR', { hour12: false })}
+        {date
+          ? date.toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              weekday: 'short',
+            })
+          : '—'}
       </span>
+      {fast && (
+        <span className="font-mono text-[10px] text-amber-400/80 border border-amber-800/50 rounded px-1">
+          ▶▶ {speed}x
+        </span>
+      )}
     </div>
   );
 }
