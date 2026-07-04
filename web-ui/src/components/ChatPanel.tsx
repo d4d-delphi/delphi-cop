@@ -130,13 +130,13 @@ export default function ChatPanel({ context }: ChatPanelProps) {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
 
-  const send = async () => {
-    const text = input.trim();
+  const send = async (override?: string) => {
+    const text = (override ?? input).trim();
     if (!text || loading) return;
 
     const next: ChatMessage[] = [...messages, { role: 'user', content: text }];
     setMessages(next);
-    setInput('');
+    if (override === undefined) setInput('');
     setError(null);
     setLoading(true);
 
@@ -253,7 +253,15 @@ export default function ChatPanel({ context }: ChatPanelProps) {
       </div>
 
       {/* Input */}
-      <div className="shrink-0 border-t border-blue-900/30 p-2">
+      <div className="shrink-0 border-t border-blue-900/30 p-2 space-y-1.5">
+        {/* 원클릭 상황 브리핑 */}
+        <button
+          onClick={() => send('현재 상황을 간략하게 브리핑해줘')}
+          disabled={loading}
+          className="w-full h-8 rounded-md bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-700/40 hover:border-cyan-600/60 disabled:opacity-50 disabled:cursor-not-allowed text-cyan-200 text-[12px] font-medium transition-colors"
+        >
+          브리핑
+        </button>
         <div className="flex items-end gap-1.5">
           <textarea
             value={input}
@@ -264,7 +272,7 @@ export default function ChatPanel({ context }: ChatPanelProps) {
             className="flex-1 resize-none max-h-24 rounded-md bg-gray-900/70 border border-gray-700/50 focus:border-cyan-600/60 outline-none px-2.5 py-1.5 text-[12px] text-gray-100 placeholder:text-gray-600"
           />
           <button
-            onClick={send}
+            onClick={() => send()}
             disabled={loading || !input.trim()}
             className="shrink-0 h-8 px-3 rounded-md bg-cyan-600/80 hover:bg-cyan-500 disabled:bg-gray-700/50 disabled:text-gray-500 text-white text-[12px] font-medium transition-colors"
           >
