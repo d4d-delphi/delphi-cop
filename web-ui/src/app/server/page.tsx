@@ -425,7 +425,9 @@ export default function ServerPage() {
         </aside>
 
         {/* Center: campaign tabs + belief timeline ------------------------ */}
-        <section className="flex-1 min-w-0 flex flex-col">
+        <section className="relative flex-1 min-w-0 flex flex-col">
+          {/* Big observation-time clock, floated top-center (mirrors the / page SimClock). */}
+          <ServerClock ts={sliderRow?.timestamp} isSignal={sliderRow?.is_signal} />
           <div className="flex items-center gap-2 px-5 py-2.5 border-b border-gray-800">
             {campaigns.map((c) => (
               <button
@@ -582,6 +584,27 @@ function HealthPill({ health, err }: { health: Health | null; err: string | null
       ) : (
         <span className="text-red-400">offline{err ? ` · ${err}` : ''}</span>
       )}
+    </div>
+  );
+}
+
+// Big amber "observation time" clock, centered at the top — mirrors the / page SimClock. Shows
+// the currently-scrubbed snapshot's timestamp (raw UTC parts, to match the rest of the page).
+function ServerClock({ ts, isSignal }: { ts?: string; isSignal?: boolean }) {
+  const wd = ts ? new Date(ts).toLocaleDateString('ko-KR', { weekday: 'short', timeZone: 'UTC' }) : '';
+  return (
+    <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-2 z-30 flex items-center gap-2.5 px-4 py-1 rounded-md bg-amber-950/40 border border-amber-900/50 shadow-[0_0_18px_rgba(0,0,0,0.55)] backdrop-blur-sm">
+      <span className={`w-1.5 h-1.5 rounded-full bg-amber-400 ${isSignal ? 'animate-pulse' : ''}`} />
+      <span className="font-mono text-[10px] text-amber-400/70 tracking-wide tabular-nums">관측시각</span>
+      <span className="font-mono text-xl font-bold tracking-widest tabular-nums text-amber-300 [text-shadow:0_0_8px_rgba(251,191,36,0.4)]">
+        {ts ? (
+          <>
+            {ts.slice(0, 10)} <span className="text-amber-400/60 text-base">({wd})</span> {ts.slice(11, 16)}
+          </>
+        ) : (
+          '—'
+        )}
+      </span>
     </div>
   );
 }
@@ -992,6 +1015,7 @@ type GEdge = {
   width: number;
   color: string;
   struct: boolean;
+  vlabel?: string; // number shown on the line when hovering (dB for flow, prob for structural)
   title: string;
 };
 
@@ -1165,36 +1189,52 @@ function buildLayout(
   const flowW = (v: number) => 1.5 + 7.5 * Math.min(1, Math.abs(v) / maxFlow);
   const structW = (p: number) => 0.6 + 3.9 * Math.max(0, Math.min(1, p));
   const sign = (v: number) => (v >= 0 ? POS_EDGE : NEG_EDGE);
-  const addEdge = (fromId: string, toId: string, width: number, color: string, struct: boolean, title: string) => {
+  const dbl = (v: number) => signed(Math.round(v * 10) / 10);
+  const addEdge = (
+    fromId: string,
+    toId: string,
+    width: number,
+    color: string,
+    struct: boolean,
+    title: string,
+    vlabel?: string,
+  ) => {
     const from = byId.get(fromId);
     const to = byId.get(toId);
     if (!from || !to) return;
-    edges.push({ id: `${fromId}->${toId}`, from: fromId, to: toId, ...anchor(from, to), width, color, struct, title });
+    edges.push({ id: `${fromId}->${toId}`, from: fromId, to: toId, ...anchor(from, to), width, color, struct, vlabel, title });
   };
 
-  // evidence type → stage (leaky residual) and → axis (static)
+  // evidence type → stage (leaky residual) and → axis (static) — signed dB
   graph.type_stage_edges.forEach((e) => {
     addEdge(`type:${e.type}`, `stage:${e.stage}`, flowW(e.residual_db), sign(e.residual_db), false,
-      `${typeMeta(e.type).label} → ${STAGE_META[e.stage]?.label || e.stage}: ${signed(e.residual_db)} dB (leaky residual)`);
+      `${typeMeta(e.type).label} → ${STAGE_META[e.stage]?.label || e.stage}: ${signed(e.residual_db)} dB (leaky residual)`,
+      dbl(e.residual_db));
   });
   graph.type_axis_edges.forEach((e) => {
     addEdge(`type:${e.type}`, `axis:${e.axis}`, flowW(e.db), sign(e.db), false,
-      `${typeMeta(e.type).label} → ${AXIS_META[e.axis]?.label || e.axis}: ${signed(e.db)} dB (static)`);
+      `${typeMeta(e.type).label} → ${AXIS_META[e.axis]?.label || e.axis}: ${signed(e.db)} dB (static)`, dbl(e.db));
   });
-  // structural: stage → output (stage name present in the output expression)
+  // structural: stage → output — the stage probability s that enters the output expression
   graph.outputs.forEach((o) => {
     graph.stages.forEach((s) => {
       if (o.expr.includes(s.name)) {
-        addEdge(`stage:${s.name}`, `out:${o.name}`, structW(s.prob), STRUCT_EDGE, true,
-          `${STAGE_META[s.name]?.label || s.name} → ${OUTPUT_META[o.name]?.label || o.name}`);
+        addEdge(`stage:${s.name}`, `out:${o.name}`, structW(s.prob), STAGE_META[s.name]?.color || STRUCT_EDGE, true,
+          `${STAGE_META[s.name]?.label || s.name} → ${OUTPUT_META[o.name]?.label || o.name}: s = ${s.prob.toFixed(3)}`,
+          s.prob.toFixed(2));
       }
     });
   });
-  // structural: axis → hypothesis (every hypothesis is a product over both axes)
+  // structural: axis → hypothesis — the actual multiplicand P(액체)/P(고체)/… that side of the
+  // axis contributes to this hypothesis (PH is the product of these over both axes).
   graph.hypotheses.forEach((h) => {
+    const parts = h.label.split('·');
     graph.axes.forEach((a) => {
-      addEdge(`axis:${a.name}`, `hyp:${h.label}`, structW(h.prob), STRUCT_EDGE, true,
-        `${AXIS_META[a.name]?.label || a.name} → PH ${h.label}`);
+      const isPos = parts.includes(a.pos);
+      const factor = isPos ? a.prob : 1 - a.prob;
+      addEdge(`axis:${a.name}`, `hyp:${h.label}`, structW(factor), AXIS_META[a.name]?.color || STRUCT_EDGE, true,
+        `${AXIS_META[a.name]?.label || a.name} → PH ${h.label}: P(${isPos ? a.pos : a.neg}) = ${factor.toFixed(3)}`,
+        factor.toFixed(2));
     });
   });
 
@@ -1232,15 +1272,31 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
     [graph, dim.w, dim.h],
   );
 
-  // hover connectivity
-  const neighbors = useMemo(() => {
+  // Hover connectivity: the whole chain through the hovered node — every ancestor (follow
+  // edges backwards) and every descendant (follow forwards), plus the edges along the way.
+  const hi = useMemo(() => {
     if (!hoverId) return null;
-    const set = new Set<string>([hoverId]);
-    edges.forEach((e) => {
-      if (e.from === hoverId) set.add(e.to);
-      if (e.to === hoverId) set.add(e.from);
-    });
-    return set;
+    const hn = new Set<string>([hoverId]);
+    const he = new Set<string>();
+    const walk = (forward: boolean) => {
+      const stack = [hoverId];
+      while (stack.length) {
+        const cur = stack.pop()!;
+        edges.forEach((e) => {
+          const near = forward ? e.from : e.to;
+          const far = forward ? e.to : e.from;
+          if (near !== cur || he.has(e.id)) return;
+          he.add(e.id);
+          if (!hn.has(far)) {
+            hn.add(far);
+            stack.push(far);
+          }
+        });
+      }
+    };
+    walk(true);
+    walk(false);
+    return { nodes: hn, edges: he };
   }, [hoverId, edges]);
 
   return (
@@ -1267,7 +1323,7 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
           {edges
             .filter((e) => e.struct)
             .map((e) => {
-              const on = !hoverId || e.from === hoverId || e.to === hoverId;
+              const on = !hoverId || hi?.edges.has(e.id);
               return (
                 <path
                   key={e.id}
@@ -1287,7 +1343,7 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
           {edges
             .filter((e) => !e.struct)
             .map((e) => {
-              const on = !hoverId || e.from === hoverId || e.to === hoverId;
+              const on = !hoverId || hi?.edges.has(e.id);
               return (
                 <path
                   key={e.id}
@@ -1296,7 +1352,7 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
                   stroke={e.color}
                   strokeWidth={e.width}
                   strokeLinecap="round"
-                  opacity={hoverId ? (on ? 0.9 : 0.06) : 0.55}
+                  opacity={hoverId ? (on ? 0.95 : 0.06) : 0.55}
                 >
                   <title>{e.title}</title>
                 </path>
@@ -1305,7 +1361,7 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
 
           {/* nodes */}
           {nodes.map((n) => {
-            const active = !neighbors || neighbors.has(n.id);
+            const active = !hi || hi.nodes.has(n.id);
             const x = n.x;
             const y = n.y - n.h / 2;
             return (
@@ -1356,6 +1412,27 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
               </g>
             );
           })}
+
+          {/* on hover: number on every connected line (dB for flow edges, prob for structural) */}
+          {hoverId &&
+            edges
+              .filter((e) => hi?.edges.has(e.id) && e.vlabel !== undefined)
+              .map((e) => (
+                <text
+                  key={`${e.id}:v`}
+                  x={(e.ax + e.bx) / 2}
+                  y={(e.ay + e.by) / 2 - 1}
+                  textAnchor="middle"
+                  fontSize={9.5}
+                  fontWeight={700}
+                  fill={e.color}
+                  stroke="#0a0e1a"
+                  strokeWidth={3}
+                  paintOrder="stroke"
+                >
+                  {e.vlabel}
+                </text>
+              ))}
         </svg>
       )}
 
@@ -1363,7 +1440,7 @@ function InfluenceGraph({ graph, at }: { graph: GraphData; at: string | null }) 
       <div className="pointer-events-none absolute bottom-1.5 left-3 right-3 flex items-center gap-3 text-[10px] text-gray-500">
         <LegendSwatch color={POS_EDGE} label="+dB" />
         <LegendSwatch color={NEG_EDGE} label="−dB" />
-        <LegendSwatch color={STRUCT_EDGE} label="구조 wiring" dashed />
+        <LegendSwatch color={STRUCT_EDGE} label="점선 = 구조 결합(확률)" dashed />
         <span className="ml-auto font-mono text-gray-600">{at ? `${at.slice(0, 10)} ${at.slice(11, 16)}` : ''}</span>
       </div>
     </div>
