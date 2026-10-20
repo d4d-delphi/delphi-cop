@@ -38,7 +38,8 @@ body {
 }
 
 .cesium-viewer .cesium-widget-credits {
-  display: none !important;
+  background: rgba(10, 14, 26, 0.85);
+  padding: 2px 6px;
 }
 
 .cesium-viewer .cesium-viewer-toolbar {
@@ -46,7 +47,8 @@ body {
 }
 
 .cesium-viewer .cesium-viewer-bottom {
-  display: none !important;
+  left: auto;
+  right: 0;
 }
 
 /* Custom scrollbar */

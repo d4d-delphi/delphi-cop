@@ -25,11 +25,11 @@ export default function RootLayout({
             Preloading starts the transfer in parallel with the Next.js bundles, and
             the later injected <script> is served from the preload cache. */}
         <link rel="preload" href="/cesium/Cesium.js" as="script" />
-        {/* The basemap imagery tiles are served from CartoDB's CDN; warm DNS/TLS so
+        {/* The basemap imagery tiles are served from OpenStreetMap; warm DNS/TLS so
             the first tile request (issued the moment the Viewer is constructed) does
             not wait on a fresh handshake. */}
-        <link rel="preconnect" href="https://a.basemaps.cartocdn.com" />
-        <link rel="dns-prefetch" href="https://basemaps.cartocdn.com" />
+        <link rel="preconnect" href="https://tile.openstreetmap.org" />
+        <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
       </head>
       <body className="antialiased">{children}</body>
     </html>

@@ -392,19 +392,20 @@ export default function CesiumMap({ scenario, currentTime, destroyedAssets, cust
 
         Cesium.Ion.defaultAccessToken = '';
 
-        // CartoDB "dark matter" tiles — dark, low-color. @1x (256px) endpoint
-        // for faster first paint: ~4x fewer tile bytes than the @2x/512px
-        // retina endpoint, at the cost of slightly softer basemap on hi-DPI.
-        // Note: requires internet at runtime.
+        // Public OSM tiles require no API key. Keep the tactical overlays vivid
+        // by dimming/desaturating only the imagery, not the entire map canvas.
         const baseLayer = new Cesium.ImageryLayer(
           new Cesium.UrlTemplateImageryProvider({
-            url: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',
-            subdomains: 'abcd',
+            url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             tileWidth: 256,
             tileHeight: 256,
-            maximumLevel: 20,
-            credit: '© OpenStreetMap contributors © CARTO',
+            maximumLevel: 19,
+            credit: new Cesium.Credit(
+              '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
+              true,
+            ),
           }),
+          { brightness: 0.35, saturation: 0.15 },
         );
 
         const viewer = new Cesium.Viewer(containerRef.current!, {

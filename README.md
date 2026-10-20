@@ -42,3 +42,12 @@ Copy `web-ui/.env.example` → `web-ui/.env.local` and fill in:
 
 Never commit `.env.local`. The `backend/.env.example` remains only for anyone still
 running the optional FastAPI service.
+
+## Basemap
+
+The Cesium map uses standard OpenStreetMap raster tiles without an API key.
+Imagery is dimmed/desaturated to match the dashboard; markers keep their original colors.
+Keep the visible OpenStreetMap attribution and browser caching/referrer defaults intact
+to comply with the [tile usage policy](https://operations.osmfoundation.org/policies/tiles/).
+The public tile service is best-effort; high-traffic deployments should use a dedicated
+tile provider.
